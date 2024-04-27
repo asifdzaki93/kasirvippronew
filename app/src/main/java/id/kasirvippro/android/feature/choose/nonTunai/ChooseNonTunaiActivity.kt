@@ -1,0 +1,197 @@
+package id.kasirvippro.android.feature.choose.nonTunai
+
+import android.app.Service
+import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
+import android.os.Bundle
+import android.view.MenuItem
+import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import id.kasirvippro.android.R
+import id.kasirvippro.android.base.BaseActivity
+import id.kasirvippro.android.models.transaction.NonTunai
+import id.kasirvippro.android.rest.entity.RestException
+import id.kasirvippro.android.sqlite.DataManager
+import id.kasirvippro.android.ui.EndlessRecyclerViewScrollListener
+import id.kasirvippro.android.ui.ext.toast
+import id.kasirvippro.android.utils.AppConstant
+import kotlinx.android.synthetic.main.activity_choose_nontunai.rv_list
+import kotlinx.android.synthetic.main.activity_choose_nontunai.sw_refresh
+
+class ChooseNonTunaiActivity : BaseActivity<ChooseNonTunaiPresenter, ChooseNonTunaiContract.View>(),
+    ChooseNonTunaiContract.View {
+
+    val adapter = ChooseNonTunaiAdapter()
+    private lateinit var scrollListener: EndlessRecyclerViewScrollListener
+
+    override fun createPresenter(): ChooseNonTunaiPresenter {
+        return ChooseNonTunaiPresenter(this, this)
+    }
+
+    override fun createLayout(): Int {
+        return R.layout.activity_choose_nontunai
+    }
+
+    override fun startingUpActivity(savedInstanceState: Bundle?) {
+        renderView()
+        getPresenter()?.onViewCreated()
+    }
+
+    private fun renderView() {
+        sw_refresh.setOnRefreshListener {
+            scrollListener.resetState()
+            reloadData()
+        }
+
+        //val layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+        val layoutManager = GridLayoutManager(this@ChooseNonTunaiActivity, 3)
+        rv_list.layoutManager = layoutManager
+        rv_list.adapter = adapter
+
+        scrollListener = object : EndlessRecyclerViewScrollListener(layoutManager) {
+            override fun onFirstItemVisible(isFirstItem: Boolean) {
+                sw_refresh.isEnabled = isFirstItem && adapter.itemCount > 0
+
+            }
+
+            override fun onLoadMore(page: Int, totalItemsCount: Int, view: RecyclerView) {
+
+            }
+        }
+        rv_list.addOnScrollListener(scrollListener)
+
+        adapter.callback = object : ChooseNonTunaiAdapter.ItemClickCallback{
+            override fun onClick(data: NonTunai) {
+                onSelected(data)
+            }
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item?.itemId){
+            android.R.id.home -> finish()
+        }
+        return super.onOptionsItemSelected(item!!)
+    }
+
+
+    private fun setupToolbar() {
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            setDisplayShowHomeEnabled(true)
+            title = "Select Payment"
+            elevation = 0f
+        }
+
+    }
+
+    override fun setData(list: List<NonTunai>) {
+        hideLoadingDialog()
+        sw_refresh.isRefreshing = false
+        adapter.setItems(list)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        setupToolbar()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        getPresenter()?.onDestroy()
+    }
+
+    override fun showErrorMessage(code: Int, msg: String?) {
+        hideLoadingDialog()
+        sw_refresh.isRefreshing = false
+        when (code) {
+            RestException.CODE_USER_NOT_FOUND -> restartLoginActivity()
+            RestException.CODE_MAINTENANCE -> openMaintenanceActivity()
+            RestException.CODE_UPDATE_APP -> openUpdateActivity()
+            else -> {
+                msg?.let {
+                    toast(this,it)
+                }
+            }
+        }
+
+    }
+
+    override fun showSuccessMessage(msg: String?) {
+        hideLoadingDialog()
+        sw_refresh.isRefreshing = false
+        msg?.let {
+            Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
+        }
+        reloadData()
+
+    }
+
+    override fun reloadData() {
+        sw_refresh.isRefreshing = true
+        var connectivity : ConnectivityManager? = null
+        var info : NetworkInfo? = null
+        connectivity = this.getSystemService(Service.CONNECTIVITY_SERVICE)
+                as ConnectivityManager
+
+        adapter.clearAdapter()
+
+        val dataManager = DataManager (this)
+        if ( connectivity != null) {
+            info = connectivity!!.activeNetworkInfo
+            if (info != null) {
+                if (info!!.state == NetworkInfo.State.CONNECTED) {
+                    getPresenter()?.loadData()
+                }else{
+                    var alllink = dataManager.allLink()
+
+                    var linkList = mutableListOf<NonTunai>()
+                    for (item in alllink){
+                        var link = NonTunai();
+                        link.set(item.id_link,item.name_link,item.img,
+                            item.increment
+                        )
+                        linkList.add(link)
+                    }
+                    getPresenter()?.setLink(linkList);
+                }
+            }else{
+                var alllink = dataManager.allLink()
+
+                var linkList = mutableListOf<NonTunai>()
+                for (item in alllink){
+                    var link = NonTunai();
+                    link.set(item.id_link,item.name_link,item.img,
+                        item.increment
+                    )
+                    linkList.add(link)
+                }
+                getPresenter()?.setLink(linkList);
+            }
+        }else{
+            var alllink = dataManager.allLink()
+
+            var linkList = mutableListOf<NonTunai>()
+            for (item in alllink){
+                var link = NonTunai();
+                link.set(item.id_link,item.name_link,item.img,
+                    item.increment
+                )
+                linkList.add(link)
+            }
+            getPresenter()?.setLink(linkList);
+        }
+    }
+
+    override fun onSelected(data: NonTunai) {
+        val newintent: Intent = intent
+        newintent.putExtra(AppConstant.DATA,data)
+        setResult(RESULT_OK,newintent)
+        finish()
+    }
+
+
+
+}

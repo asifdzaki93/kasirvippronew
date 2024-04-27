@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item android:top="0dp">
+
+        <shape android:shape="rectangle" >
+            <corners
+                android:topLeftRadius="15dp"
+                android:topRightRadius="20dp"
+                android:bottomLeftRadius="400dp"
+                android:bottomRightRadius="15dp"/>
+            <gradient
+                android:startColor="@color/colorPrimaryLight30"
+                android:endColor="@color/colorPrimary" />
+        </shape>
+    </item>
+
+    <item android:bottom="50dp">
+
+        <shape android:shape="rectangle" >
+            <corners
+                android:topLeftRadius="20dp"
+                android:topRightRadius="20dp"
+                android:bottomLeftRadius="100dp"
+                android:bottomRightRadius="400dp"/>
+            <gradient
+                android:startColor="@color/colorPrimary"
+                android:endColor="@color/colorPrimaryDark" />
+        </shape>
+    </item>
+
+    <item android:bottom="200dp">
+
+        <shape android:shape="rectangle" >
+            <corners
+                android:topLeftRadius="20dp"
+                android:topRightRadius="15dp"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="310dp"/>
+            <gradient
+                android:startColor="@color/colorPrimaryLight"
+                android:endColor="@color/colorPrimary" />
+        </shape>
+    </item>
+
+    <item android:top="0dp" >
+        <shape android:shape="rectangle" >
+            <gradient
+                android:startColor="@color/colorPrimaryLight" />
+            <size android:height="50dp" />
+
+            <corners
+                android:topLeftRadius="15dp"
+                android:bottomLeftRadius="15dp"/>
+        </shape>
+    </item>
+</layer-list>

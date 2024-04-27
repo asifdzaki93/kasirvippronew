@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="15dp">
+
+            <LinearLayout
+                android:paddingStart="@dimen/standard_margin_2x"
+                android:paddingEnd="@dimen/standard_margin_3x"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin_2x"
+                    android:text="@string/lbl_insert_number_info"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/gradient_blue"
+                    android:textSize="@dimen/subheading" />
+
+                <LinearLayout
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:id="@+id/ll_header"
+                    android:paddingBottom="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin"
+                    android:paddingLeft="@dimen/standard_margin_2x"
+                    android:paddingRight="@dimen/standard_margin_2x"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/focusColorHighlight">
+
+                    <LinearLayout android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/standard_margin"
+                        android:paddingLeft="@dimen/standard_margin"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/rounded_white_4dp_stroke_gray">
+
+                        <EditText
+                            android:layout_gravity="center"
+                            android:id="@+id/et_search"
+                            android:hint="@string/lbl_insert_number"
+                            android:textColorHint="@color/secondaryText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/primaryText"
+                            android:textSize="@dimen/subheading"
+                            android:inputType="number"
+                            android:imeOptions="actionSearch"
+                            />
+                        <ImageView
+                            android:id="@+id/btn_click"
+                            android:layout_marginRight="@dimen/standard_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            app:srcCompat="@drawable/ic_search"
+                            android:tint="@color/primaryText"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <FrameLayout
+            android:paddingStart="@dimen/standard_margin_2x"
+            android:paddingEnd="@dimen/standard_margin_3x"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/sw_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"/>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/et_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/standard_margin_1.5x"
+            android:textColor="@color/primaryText"
+            android:textColorHint="@color/secondaryText"
+            android:textSize="@dimen/subheading" />
+        <TextView
+            android:id="@+id/et_brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/standard_margin_1.5x"
+            android:textColor="@color/primaryText"
+            android:textColorHint="@color/secondaryText"
+            android:textSize="@dimen/subheading" />
+
+    </LinearLayout>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

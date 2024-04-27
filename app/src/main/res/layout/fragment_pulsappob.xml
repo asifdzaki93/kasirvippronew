@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_gray">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_bawahppob"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/standard_margin_1x">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/gradien_blue_rounded2"
+                                        android:padding="@dimen/standard_margin_2x"
+                                        android:layout_marginTop="1dp"
+                                        android:orientation="horizontal">
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:padding="0dp"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_gravity="center"
+                                                android:id="@+id/tv_saldo"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="💰 Saldo Rp 0"
+                                                android:textStyle="bold"
+                                                android:textColor="@color/white_gray"
+                                                android:textSize="@dimen/subtitle"
+                                                />
+
+                                            <TextView
+                                                android:layout_gravity="center"
+                                                android:padding="5dp"
+                                                android:background="@drawable/green"
+                                                android:gravity="center"
+                                                android:id="@+id/btn_topup"
+                                                android:layout_width="10dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="TOPUP"
+                                                android:textStyle="bold"
+                                                android:textColor="@color/white_gray"
+                                                android:textSize="@dimen/subtitle"
+                                                tools:ignore="RtlHardcoded" />
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+
+
+
+
+
+                        </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="20dp"
+                        android:layout_marginTop="-25dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_rounded_white"
+                            android:focusable="true"
+                            android:paddingTop="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/standard_margin_1.5x">
+
+
+                                <LinearLayout
+                                    android:id="@+id/btn_pulsa"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/rounded_white_16dp"
+                                        android:padding="10dp"
+                                        app:srcCompat="@drawable/ic_pulsa" />
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/standard_margin_1x"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/lbl_pulsa"
+                                        android:textColor="@color/primaryText"
+                                        android:textSize="@dimen/body"
+                                        android:gravity="center_horizontal"
+                                        android:textAlignment="center"/>
+
+
+                                </LinearLayout>
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/btn_smstelpon"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/rounded_white_16dp"
+                                        android:padding="10dp"
+                                        app:srcCompat="@drawable/ic_smstelpon" />
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/standard_margin_1x"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/lbl_smstelpon"
+                                        android:textColor="@color/primaryText"
+                                        android:textSize="@dimen/body"
+                                        android:gravity="center_horizontal"
+                                        android:textAlignment="center" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/btn_paketdata"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/rounded_white_16dp"
+                                        android:padding="10dp"
+                                        app:srcCompat="@drawable/ic_paketdata" />
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/standard_margin_1x"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/lbl_paketdata"
+                                        android:textColor="@color/primaryText"
+                                        android:textSize="@dimen/body"
+                                        android:gravity="center_horizontal"
+                                        android:textAlignment="center" />
+
+
+                                </LinearLayout>
+
+
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/divider"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/standard_margin_1.5x">
+
+                                <LinearLayout
+                                    android:id="@+id/btn_plntoken"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/rounded_white_16dp"
+                                        android:padding="10dp"
+                                        app:srcCompat="@drawable/ic_pln" />
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/standard_margin_1x"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/lbl_plntoken"
+                                        android:textColor="@color/primaryText"
+                                        android:textSize="@dimen/body"
+                                        android:gravity="center_horizontal"
+                                        android:textAlignment="center" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/btn_emoney"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/rounded_white_16dp"
+                                        android:padding="10dp"
+                                        app:srcCompat="@drawable/ic_emoney" />
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/standard_margin_1x"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/lbl_emoney"
+                                        android:textColor="@color/primaryText"
+                                        android:textSize="@dimen/body"
+                                        android:gravity="center_horizontal"
+                                        android:textAlignment="center" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/btn_voucher"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/rounded_white_16dp"
+                                        android:padding="10dp"
+                                        app:srcCompat="@drawable/ic_voucher" />
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/standard_margin_1x"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/lbl_voucher"
+                                        android:textColor="@color/primaryText"
+                                        android:textSize="@dimen/body"
+                                        android:gravity="center_horizontal"
+                                        android:textAlignment="center" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/divider"/>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:padding="@dimen/standard_margin_1.5x">
+
+
+                                <LinearLayout
+                                    android:id="@+id/btn_game"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/rounded_white_16dp"
+                                        android:padding="10dp"
+                                        app:srcCompat="@drawable/ic_games" />
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/standard_margin_1x"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/lbl_games"
+                                        android:textColor="@color/primaryText"
+                                        android:textSize="@dimen/body"
+                                        android:gravity="center_horizontal"
+                                        android:textAlignment="center" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/btn_pln"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/rounded_white_16dp"
+                                        android:padding="10dp"
+                                        app:srcCompat="@drawable/ic_pln2" />
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/standard_margin_1x"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/lbl_pln"
+                                        android:textColor="@color/primaryText"
+                                        android:textSize="@dimen/body"
+                                        android:gravity="center_horizontal"
+                                        android:textAlignment="center" />
+
+
+                                </LinearLayout>
+
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/btn_multipayment"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/rounded_white_16dp"
+                                        android:padding="10dp"
+                                        app:srcCompat="@drawable/ic_multipayment" />
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/standard_margin_1x"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/lbl_multipayment"
+                                        android:textColor="@color/primaryText"
+                                        android:textSize="@dimen/body"
+                                        android:gravity="center_horizontal"
+                                        android:textAlignment="center" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/divider"/>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:padding="@dimen/standard_margin_1.5x">
+
+
+                                <LinearLayout
+                                    android:id="@+id/btn_bpjs"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/rounded_white_16dp"
+                                        android:padding="10dp"
+                                        app:srcCompat="@drawable/ic_bpjs" />
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/standard_margin_1x"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/lbl_bpjs"
+                                        android:textColor="@color/primaryText"
+                                        android:textSize="@dimen/body"
+                                        android:gravity="center_horizontal"
+                                        android:textAlignment="center" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/btn_telpon"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/rounded_white_16dp"
+                                        android:padding="10dp"
+                                        app:srcCompat="@drawable/ic_pascabayar" />
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/standard_margin_1x"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/lbl_telpon"
+                                        android:textColor="@color/primaryText"
+                                        android:textSize="@dimen/body"
+                                        android:gravity="center_horizontal"
+                                        android:textAlignment="center" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/btn_internet"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/rounded_white_16dp"
+                                        android:padding="10dp"
+                                        app:srcCompat="@drawable/ic_internet" />
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/standard_margin_1x"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/lbl_internet"
+                                        android:textColor="@color/primaryText"
+                                        android:textSize="@dimen/body"
+                                        android:gravity="center_horizontal"
+                                        android:textAlignment="center" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout >

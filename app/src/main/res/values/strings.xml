@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kasir VIP</string>
+    <string name="default_notification_channel_id">default</string>
+    <string name="freshchat_file_provider_authority">id.kasirvippro.android.provider</string>
+    <string name="banner_ad_unit_id">ca-app-pub-1475172704743990/6035764422</string>
+
+    <string name="default_lang">in</string>
+    <string name="id_lang">in</string>
+    <string name="id_country">ID</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="currency_discount" translatable="false">Rp</string>
+
+
+    <string name="menu_home">Beranda</string>
+    <string name="menu_sell">Penjualan</string>
+    <string name="menu_history">Histori Transaksi</string>
+    <string name="menu_report">Laporan</string>
+    <string name="menu_management">Manajemen</string>
+    <string name="menu_setting">Pengaturan</string>
+    <string name="menu_help">Bantuan</string>
+    <string name="menu_category">Kategori Produk</string>
+    <string name="menu_add_category">Tambah Kategori</string>
+    <string name="menu_edit_category">Edit Kategori</string>
+    <string name="menu_add_supplier">Tambah Supplier</string>
+    <string name="menu_edit_supplier">Edit Supplier</string>
+    <string name="menu_add_customer">Tambah Pelanggan</string>
+    <string name="menu_edit_customer">Edit Pelanggan</string>
+    <string name="menu_add_product">Tambah Produk</string>
+    <string name="menu_edit_product">Edit Produk</string>
+    <string name="menu_scan_barcode">Scan Barcode</string>
+    <string name="menu_detail_transaction">Detail Transaksi</string>
+    <string name="menu_hutang_piutang">Kelola Hutang</string>
+    <string name="menu_hutang_supplier">Daftar Hutang</string>
+    <string name="menu_piutang_customer">Daftar Piutang</string>
+    <string name="menu_piutang_customer_all">Piutang Terakhir</string>
+    <string name="menu_hutang_supplier_all">Hutang Terakhir</string>
+    <string name="menu_choose_product">Pilih Produk</string>
+    <string name="menu_sell_manual">Penjualan</string>
+    <string name="menu_choose_customer">Pilih Pelanggan</string>
+    <string name="menu_choose_supplier">Pilih Supplier</string>
+
+
+
+
+
+    <string name="reason_permission_read_phone_state">Anda harus memberikan izin untuk mengakses IMEI dari perangkat Anda</string>
+    <string name="reason_permission_location">Izinkan untuk mendapatkan lokasi dari perangkat Anda</string>
+    <string name="reason_permission_camera">Anda harus memberikan izin sebelum dapat menggunakan kamera dan penyimpanan</string>
+    <string name="reason_permission_bluetooth">Izinkan untuk mengakses bluetooth dari perangkat Anda</string>
+    <string name="reason_permission_write_external">Izinkan untuk menyimpan gambar ke perangkat Anda</string>
+
+
+    <string name="lbl_tagline_1">Kelola bisnis Anda lebih Mudah!</string>
+    <string name="lbl_tagline_2">Silahkan masuk dan kelola kebutuan toko Anda!</string>
+    <string name="lbl_welcome">Selamat Datang!</string>
+    <string name="lbl_tagline_3">Daftarkan warung Anda dan nikmati kemudahannya.</string>
+    <string name="lbl_tagline_4">Kelola toko Anda</string>
+
+    <string name="lbl_title_manage">Cek sesuaikan data produk, kategori produk,\ndata pelanggan, data supplier dan hutang piutang\nToko Anda</string>
+    <string name="lbl_manage_produk_title">Produk dan Layanan</string>
+    <string name="lbl_manage_produk_info">Atur Produk Toko Anda!</string>
+    <string name="lbl_manage_kategori_title">Kategori Produk</string>
+    <string name="lbl_manage_kategori_info">Atur Kategori Produk Toko Anda!</string>
+    <string name="lbl_manage_discount_title">Diskon</string>
+    <string name="lbl_manage_discount_info">Atur Diskon Toko Anda!</string>
+    <string name="lbl_manage_supplier_title">Supplier</string>
+    <string name="lbl_manage_supplier_info">Cek Data Supplier Toko Anda!</string>
+    <string name="lbl_manage_pelanggan_title">Pelanggan</string>
+    <string name="lbl_manage_pelanggan_info">Kelola Pelanggan Toko Anda!</string>
+    <string name="lbl_manage_staff_title">Karyawan</string>
+    <string name="lbl_manage_staff_info">Kelola Karyawan Toko Anda!</string>
+    <string name="lbl_manage_store_title">Toko dan Cabang</string>
+    <string name="lbl_manage_store_info">Kelola Toko dan Cabang Anda!</string>
+    <string name="lbl_manage_bank_title">Kelola Bank</string>
+    <string name="lbl_manage_bank_info">Kelola Bank Transfer usaha Anda!</string>
+
+    <string name="lbl_etalase_kelolatoko_title">Kelola Toko Online</string>
+    <string name="lbl_etalase_kelolatoko_info">Kelola Toko Online Anda!</string>
+    <string name="lbl_etalase_linktoko_title">Info Toko Online</string>
+    <string name="lbl_etalase_linktoko_info">Sebar dan bagikan Link Toko Anda!</string>
+
+    <string name="lbl_title_report">Cek stok barang, transaksi,laba rugi, dan mutasi\nToko Anda</string>
+    <string name="lbl_report_produk_title">Stok Barang</string>
+    <string name="lbl_report_produk_info">Cek stok barang Anda!</string>
+    <string name="lbl_report_kulakan_title">Histori Kulakan</string>
+    <string name="lbl_report_kulakan_info">Cek histori kulakan Anda!</string>
+    <string name="lbl_report_transaksi_title">Produk / Layanan</string>
+    <string name="lbl_report_transaksi_info">Cek laporan produk/layanan Anda!</string>
+    <string name="lbl_report_profit_title">Keuangan</string>
+    <string name="lbl_report_profit_info">Cek laporan keuangan toko Anda!</string>
+    <string name="lbl_report_mutasi_title">Mutasi Kas</string>
+    <string name="lbl_report_mutasi_info">Cek mutasi kas toko Anda!</string>
+    <string name="lbl_report_payslip_title">Gaji Karyawan</string>
+    <string name="lbl_report_payslip_info">Cek laporan gaji karyawan toko Anda!</string>
+    <string name="lbl_report_absensi_title">Absensi Karyawan</string>
+    <string name="lbl_report_absensi_info">Cek laporan absensi karyawan toko Anda!</string>
+    <string name="lbl_report_grosir_title">Grosir Online</string>
+    <string name="lbl_report_grosir_info">Cek laporan grosir online Anda!</string>
+    <string name="lbl_report_branch_title">Penjualan</string>
+    <string name="lbl_report_branch_info">Cek semua penjualan toko Anda!</string>
+
+    <string name="lbl_input_name_title">Nama produk</string>
+    <string name="lbl_input_name_info">Masukkan nama produk. Contoh: Minyak goreng</string>
+    <string name="lbl_input_category_title">Kategori</string>
+    <string name="lbl_input_category_info">Pilih kategori</string>
+    <string name="lbl_input_price_stock_title">Harga &amp; Stok</string>
+    <string name="lbl_input_price_sell_title">Harga Jual (Rp)</string>
+    <string name="lbl_input_price_buy_title">Harga Beli (Rp)</string>
+    <string name="lbl_input_stock_title">Stok</string>
+    <string name="lbl_input_first_stock_title">Stok Awal</string>
+    <string name="lbl_input_minstock_title">Minimum Stok</string>
+    <string name="lbl_input_desc_title">Keterangan</string>
+    <string name="lbl_input_discount_title">Diskon</string>
+    <string name="lbl_input_barcode_title">Barcode</string>
+    <string name="lbl_input_barcode_info">Masukkan barcode</string>
+
+    <string name="lbl_piutang_sum">Jumlah Piutang</string>
+    <string name="lbl_hutang_sum">Jumlah Hutang</string>
+    <string name="lbl_hutang_supplier">Ke Supplier</string>
+    <string name="lbl_piutang_customer">Pelanggan</string>
+    <string name="lbl_hutang_rp">($)</string>
+    <string name="lbl_hutang">Hutang</string>
+    <string name="lbl_piutang">Piutang</string>
+    <string name="lbl_transaksi">Transaksi</string>
+    <string name="lbl_hutang_belum_lunas">Belum Lunas</string>
+    <string name="lbl_hutang_jatuh_tempo">Jatuh Tempo</string>
+    <string name="lbl_hutang_terakhir">Hutang Terakhir</string>
+    <string name="lbl_piutang_terakhir">Piutang Terakhir</string>
+    <string name="lbl_tagihan">Jumlah Tagihan</string>
+    <string name="lbl_jumlah_yang_dibayarkan">Jumlah yang sudah dibayarkan</string>
+    <string name="lbl_total_yang_dibayarkan">Total yang sudah dibayarkan</string>
+    <string name="lbl_hutang_nominal">Nominal</string>
+
+
+
+    <string name="lbl_name">Nama</string>
+    <string name="lbl_store_name">Nama Toko</string>
+    <string name="lbl_name_hint">Masukkan Nama Lengkap Anda</string>
+    <string name="lbl_phone">No. Handphone</string>
+    <string name="lbl_phone_hint">Masukkan No. Handphone Anda</string>
+    <string name="lbl_email">Email</string>
+    <string name="lbl_email_hint">Masukkan Email Anda</string>
+    <string name="lbl_address">Alamat</string>
+    <string name="lbl_address_hint">Masukkan Alamat Anda</string>
+    <string name="lbl_province">Provinsi</string>
+    <string name="lbl_province_hint">Provinsi Anda</string>
+    <string name="lbl_city">Kota</string>
+    <string name="lbl_city_hint">Kota Anda</string>
+    <string name="lbl_phone_login">No. Handphone Anda</string>
+    <string name="lbl_password_login">Password Anda</string>
+    <string name="lbl_omset">Omset Toko Anda</string>
+    <string name="lbl_phone_2">No. HP</string>
+    <string name="lbl_rp_0">Rp 0</string>
+
+    <string name="lbl_search_product">Cari Produk</string>
+    <string name="lbl_search_category">Cari Kategori</string>
+    <string name="lbl_search_discount">Cari Diskon</string>
+    <string name="lbl_search_customer">Cari Pelanggan</string>
+    <string name="lbl_search_supplier">Cari Supplier</string>
+    <string name="lbl_search_staff">Cari Karyawan</string>
+    <string name="lbl_search_customer_piutang">Cari Pelanggan Piutang</string>
+    <string name="lbl_search_transaction">Cari Transaksi</string>
+    <string name="lbl_search_invoice">Masukkkan nomor invoice</string>
+    <string name="lbl_search_product_transaction">Cari transaksi</string>
+
+
+
+
+    <string name="lbl_category_title">Kategori Produk</string>
+    <string name="lbl_category_hint">Nama Kategori Produk</string>
+
+    <string name="lbl_name_supplier">Nama Supplier</string>
+    <string name="lbl_name_supplier_hint">Masukkan Nama Lengkap Supplier Anda</string>
+    <string name="lbl_phone_supplier_hint">Masukkan No. Handphone Supplier Anda</string>
+    <string name="lbl_email_supplier_hint">Masukkan Email Supplier Anda</string>
+    <string name="lbl_address_supplier_hint">Masukkan Alamat Supplier Anda</string>
+
+    <string name="lbl_setting_account_title">Akun</string>
+    <string name="lbl_setting_account_info">Data Diri, Alamat dan Keamanan Akun</string>
+    <string name="lbl_setting_store_title">Toko</string>
+    <string name="lbl_setting_store_info">Profile Toko, Lokasi Toko dan Telepon Toko</string>
+    <string name="lbl_setting_printer_title">Printer</string>
+    <string name="lbl_setting_printer_info">Pengaturan Printer</string>
+    <string name="lbl_setting_staff_title">Data Karyawan</string>
+    <string name="lbl_setting_staff_info">Aset Data Karyawan, Tambah Karyawan, Status Karyawan</string>
+    <string name="lbl_setting_privacy_title">Kebijakan Privasi</string>
+    <string name="lbl_setting_term_title">Syarat &amp; Ketentuan</string>
+    <string name="lbl_setting_help_title">Pusat Bantuan</string>
+
+    <string name="lbl_detail_id">ID Transaksi:</string>
+    <string name="lbl_detail_datetime">Tanggal</string>
+    <string name="lbl_detail_payment_method">Metode Pembayaran</string>
+    <string name="lbl_detail_operator">Operator</string>
+    <string name="lbl_detail_customer">Pelanggan</string>
+    <string name="lbl_detail_supplier">Supplier</string>
+    <string name="lbl_detail_products">Daftar Produk</string>
+    <string name="lbl_detail_subtotal">Subtotal</string>
+    <string name="lbl_detail_total">Total</string>
+    <string name="lbl_detail_bayar">Bayar</string>
+    <string name="lbl_detail_kembalian">Kembalian</string>
+    <string name="lbl_detail_status">Status</string>
+
+
+    <string name="btn_save">Simpan</string>
+    <string name="btn_login">Masuk</string>
+    <string name="btn_register">Daftar</string>
+    <string name="btn_pos">Penjualan</string>
+    <string name="btn_ppob">Pembayaran</string>
+    <string name="btn_grosir">Kulakan</string>
+    <string name="btn_add_product">Tambah Produk</string>
+    <string name="btn_add_discount">Tambah Diskon</string>
+    <string name="btn_add_customer">Tambah Pelanggan</string>
+    <string name="btn_add_category">Tambah Kategori</string>
+    <string name="btn_add_supplier">Tambah Supplier</string>
+    <string name="btn_add_staff">Tambah Karyawan</string>
+    <string name="btn_upload_product">Upload Produk</string>
+    <string name="btn_print">Cetak Struk</string>
+    <string name="btn_cancel_transaction">Batalkan Transaksi</string>
+    <string name="btn_detail_hutang_supplier">Detail Hutang Supplier</string>
+    <string name="btn_detail_piutang_customer">Detail Piutang Pelanggan</string>
+    <string name="btn_bayar">Bayar</string>
+    <string name="btn_add_to_cart">Tambah Ke Keranjang</string>
+    <string name="btn_end">Selesai</string>
+    <string name="btn_share_social">Bagikan</string>
+    <string name="btn_next">Lanjutkan</string>
+    <string name="btn_buy">Beli</string>
+    <string name="btn_see_all">Lihat Semua</string>
+    <string name="btn_copy">Salin</string>
+
+
+
+    <string name="err_empty_store">Nama toko harus diisi</string>
+    <string name="err_empty_category">Nama kategori harus diisi</string>
+    <string name="err_empty_name">Nama lengkap harus diisi</string>
+    <string name="err_empty_email">Email harus diisi</string>
+    <string name="err_email_format">Format Email salah</string>
+    <string name="err_phone_format">Format No. handphone salah</string>
+    <string name="err_empty_phone">No. handphone harus diisi</string>
+    <string name="err_empty_address">Alamat harus diisi</string>
+    <string name="err_empty_province">Provinsi harus diisi</string>
+    <string name="err_empty_city">Kota harus diisi</string>
+    <string name="err_empty_product_name">Nama produk harus diisi</string>
+    <string name="err_empty_stock">Stok tidak boleh kosong</string>
+    <string name="err_empty_sell">Harga jual tidak boleh kosong</string>
+    <string name="err_empty_buy">Harga beli tidak boleh kosong</string>
+    <string name="err_empty_min_buy">minimal pembelian tidak boleh kosong</string>
+    <string name="err_empty_grosir_price">Harga Online  tidak boleh kosong</string>
+    <string name="err_empty_product_category">Kategori harus diisi</string>
+    <string name="change_language">Ubah Bahasa</string>
+    <string name="account">Akun</string>
+    <string name="logout">Keluar</string>
+    <string name="change_account">Ubah Profil</string>
+    <string name="change_password">Ubah Password</string>
+    <string name="date">Tanggal</string>
+    <string name="turnover">Total Penjualan</string>
+    <string name="current_password">Password Saat ini</string>
+    <string name="new_password">Password Baru</string>
+    <string name="confirm_password">Konfirmasi Password</string>
+    <string name="online_store">Toko Online</string>
+    <string name="transaction_history">Transaksi</string>
+    <string name="remaining_debt">Sisa hutang</string>
+    <string name="delete">Hapus</string>
+    <string name="cash">Tunai</string>
+    <string name="noncash">Non tunai</string>
+    <string name="debt">Hutang</string>
+    <string name="duedate">Jatuh tempo</string>
+    <string name="type_of_payment">Jenis Pembayaran</string>
+    <string name="payent_detail">Detail Pembayaran</string>
+    <string name="enter_payment_detail">masukkan detail pembayaran</string>
+    <string name="customer">Pelanggan</string>
+    <string name="btn_add_customerplus">+ tambah Pelanggan</string>
+    <string name="discount">Diskon</string>
+    <string name="billing_detail">Detail Tagihan</string>
+    <string name="service_charge">Biaya Layanan</string>
+    <string name="tax">Pajak</string>
+    <string name="money_received">Uang yang diterima</string>
+    <string name="pay_bill">Bayar Tagihan</string>
+    <string name="clicksell">klik cari atau scan untuk memulai</string>
+    <string name="spending">Pengeluaran</string>
+    <string name="wholesale">Kulakan</string>
+    <string name="sales">Penjualan</string>
+    <string name="spendingusd">Pengeluaran </string>
+    <string name="name_spending">Nama Pengeluaran</string>
+    <string name="total_sales">Total Penjualan</string>
+    <string name="average">Rata-rata</string>
+    <string name="sales_day">Penjualan / hari</string>
+    <string name="amount">Jumlah</string>
+    <string name="full_name">Nama legkap</string>
+    <string name="presence">Kehadiran</string>
+    <string name="number_atandence">Jumlah kehadiran</string>
+    <string name="income">Pendapatan</string>
+    <string name="basic_salary">Gaji pokok</string>
+    <string name="commision">Komisi (%)</string>
+    <string name="allowance">Tunjangan</string>
+    <string name="total_income">Total Pendapatan</string>
+    <string name="salary_cut">Potongan gaji</string>
+    <string name="salary_deduction">Potongan gaji</string>
+    <string name="take_home_pay">Gaji Bersih</string>
+    <string name="have_stock">Mempunyai Stok?</string>
+    <string name="sales_online">Jual Online?</string>
+    <string name="seling_price">Harga Online </string>
+    <string name="store">Toko</string>
+    <string name="potition">Posisi</string>
+    <string name="web_online100">Web Toko Online 100% GRATIS</string>
+    <string name="share_your">Bagikan tautan toko online Anda dan tunggu pesanan masuk melalui Whatsapp</string>
+    <string name="share_your2">Bagikan tautan toko online Anda</string>
+    <string name="note_onlinestore">*Pastikan anda sudah mengatur nomor whatsapp anda di menu manajemen toko online, selain itu pastikan anda sudah mencentang menu Produk sebagai produk Online agar produk muncul di Toko Online.</string>
+    <string name="chose_color">Pilih Warna</string>
+    <string name="supplier_payable">Hutang Suplier</string>
+    <string name="receivables_customer">Hutang Pelanggan</string>
+    <string name="remaining_receivable">Sisa Hutang</string>
+    <string name="payment_sukses" translatable="false">Pembayaran Berhasil</string>
+    <string name="bill">Tagihan</string>
+    <string name="payment_amount">Jumlah Pembayaran</string>
+    <string name="daily">Harian</string>
+    <string name="weekly">Mingguan</string>
+    <string name="monthly">Bulanan</string>
+    <string name="filter_by">Filter by</string>
+    <string name="remaining_stok">Sisa Stok</string>
+    <string name="lbl_powered_by">Powered by Kasir VIP</string>
+    <string name="information">Informasi lainnya</string>
+    <string name="lbl_about">Tentang Kami</string>
+    <string name="premium_upgrade">Upgrade Ke Premium</string>
+    <string name="premium">Premium</string>
+    <string name="lbl_success">Sukses!</string>
+    <string name="listexpence_lbl">Daftar Pengeluaran</string>
+    <string name="tab_news">Berita</string>
+    <string name="not_connected_to_internet">Tidak ada koneksi internet</string>
+    <string name="repeat">Ulang</string>
+    <string name="lbl_point">Poin</string>
+
+    <string name="lbl_transaksi_thismont">Transaksi\n(bulan ini)</string>
+    <string name="lbl_order_thismont">Order\n(bulan ini)</string>
+    <string name="menu_manage_order">Kelola Order</string>
+    <string name="lbl_manage_editorder">Edit Order</string>
+    <string name="btn_delete_transaction">Delete Order</string>
+    <string name="new_add_order">Add Order</string>
+    <string name="lbl_typeorder">Type Order</string>
+    <string name="btn_order">Add Order</string>
+    <string name="lbl_add_sukses">Add Product Success</string>
+    <string name="menu_fast_menu">Menu Lain</string>
+    <string name="btn_process">Proccess</string>
+    <string name="chose_shift">Choose Shift</string>
+    <string name="initial_capital">Modal Awal</string>
+    <string name="select_shift">Select Shift</string>
+    <string name="initial">INITIAL</string>
+    <string name="lbl_sales_cash">Sales Cash</string>
+    <string name="sales_return">Sales Return</string>
+    <string name="sales_noncash">Sales Non Cash</string>
+    <string name="lbl_sales_debt">Sales Debt</string>
+    <string name="cash_actual">Cash Actual</string>
+    <string name="lbl_variance">Variance</string>
+    <string name="btn_close_sift">CLose Shift</string>
+    <string name="btn_closing_sift">Closing Shift</string>
+    <string name="lbl_shift">Shift</string>
+    <string name="daily_close">Closed Daily</string>
+    <string name="lbl_shift_system">Shift System</string>
+    <string name="varian_product">Product Variant</string>
+    <string name="lbl_manage_variant_produk_title">Manage Variant</string>
+    <string name="menu_edit_variant_product">Edit Variant</string>
+    <string name="menu_add_variant_product">Add Variant</string>
+    <string name="lbl_input_name_title_variant">Name Product Variant</string>
+    <string name="btn_add_categoryplus">+ add Category</string>
+    <string name="lbl_qrcode">QR Code</string>
+    <string name="lbl_qrcode_title">Your QR-Code</string>
+    <string name="lbl_qrcode_info">Share your QR Code</string>
+    <string name="scan_for_order">Scan To Order Online</string>
+    <string name="note_qrcode">use this feature to make it easier for your customers to order online, save or share</string>
+    <string name="err_empty_currency">Currency Required</string>
+    <string name="lbl_currency">Currency Code</string>
+    <string name="ex_usd">ex: USD or $</string>
+    <string name="lbl_amount_pay">Payment Amount</string>
+    <string name="enter_mount_pay">Enter the Non-cash Payment Amount</string>
+    <string name="lbl_payment_noncash">Non-cash nominal</string>
+    <string name="cash_nominal">Pembayaran Tunai</string>
+    <string name="lbl_payment_debt">Debt Nominal</string>
+    <string name="lbl_sumary_report">Laporan Sumary</string>
+    <string name="lbl_daily_report">Laporan Harian</string>
+    <string name="lbl_info_daily_report">Check your store daily report</string>
+    <string name="lbl_credit_card">Credit Card</string>
+    <string name="lbl_debit_card">Debit card</string>
+    <string name="lbl_period">Transaction period</string>
+    <string name="lbl_referal">Referral Code</string>
+    <string name="lbl_search_network">Search Downline</string>
+    <string name="lbl_network_title">Your Network</string>
+    <string name="lbl_subnetwork_title">Network</string>
+    <string name="lbl_sharing">Share and get  commission</string>
+    <string name="lbl_info_share">Invite your friends to join and Upgrade \n and get the commission</string>
+    <string name="lbl_share">Share Your Affiliate Code</string>
+    <string name="lbl_info_commision">*Upgrade fee commission is given after your invited friend upgrades to premium.</string>
+    <string name="lbl_referal_title">Referral Code</string>
+    <string name="lbl_afiliate_info">Share your Code to earn commissions!</string>
+    <string name="lbl_network_info">See the network below you</string>
+    <string name="lbl_commision_info">Check Your Commision</string>
+    <string name="lbl_afiliate">Afiliate</string>
+    <string name="lbl_input_vat_title">Tax (%)</string>
+    <string name="lbl_footer_print">Note on receipt</string>
+    <string name="finish_cocking" translatable="false">Order Selesai</string>
+    <string name="lbl_manage_changetable" translatable="false">Ubah Meja</string>
+    <string name="menu_edit_table" translatable="false">Edit Table</string>
+    <string name="lbl_manage_table" translatable="false">Manage Table</string>
+    <string name="lbl_manage_table_info" translatable="false">Manage Your Store Table Data!</string>
+    <string name="lbl_online_order" translatable="false">Online Order</string>
+    <string name="new_order" translatable="false">Order Baru</string>
+    <string name="lbl_preorder" translatable="false">Pre Order</string>
+    <string name="lbl_date_send" translatable="false">Tanggal Pengiriman</string>
+    <string name="lbl_pilih_kurir" translatable="false">Pilih Kurir</string>
+    <string name="menu_choose_kurir" translatable="false">Pilih Kurir</string>
+    <string name="type_pos">Jenis Usaha</string>
+    <string name="menu_add_table">Tambahkan Meja</string>
+    <string name="lbl_table">Nama Meja</string>
+    <string name="name_table">Nama Meja</string>
+    <string name="hint_empty_table">Kosongkan jika tanpa Meja</string>
+    <string name="lbl_table_title">Nama Meja</string>
+    <string name="lbl_table_jointo">Pilih Meja</string>
+    <string name="lbl_manage_jointable">Gabung Meja</string>
+    <string name="lbl_table_now">Meja Saat ini</string>
+    <string name="lbl_table_old">Meja lama</string>
+    <string name="lbl_table_new">Meja baru</string>
+    <string name="err_empty_name_table">Nama Meja tidak boleh kosong</string>
+
+    <string name="lbl_manage_splitorder">Pisahkan urutan</string>
+    <string name="lbl_manage_order">Kelola Pesanan</string>
+
+
+
+    <string name="lbl_manage_kitchen">Kelola Pesanan</string>
+    <string name="lbl_manage_kitchen_info">kelola pesanan yang masuk dan siapkan</string>
+    <string name="lbl_manage_edtiorder_info">Tambah, Edit, atau Hapus pesanan Item</string>
+    <string name="lbl_manage_changetable_info">Pindahkan Tanda Terima ke Meja terbaru</string>
+    <string name="lbl_manage_jointable_info">Gabungkan Tanda Terima dalam satu Meja</string>
+    <string name="hint_empty_discount">kosongkan jika tidak ada diskon</string>
+    <string name="hint_empty_customer">Kosongkan jika tidak ada pelanggan</string>
+
+
+    <string name="lbl_pos">POS</string>
+    <string name="lbl_payment_dp">Nominal Hutang</string>
+    <string name="lbl_search_kurir">Cari Kurir</string>
+    <string name="lbl_input_menu_name_title">Nama Product</string>
+    <string name="lbl_input_alertstock">Stok Peringatan</string>
+    <string name="menu_print_label">Mencetak label</string>
+    <string name="menu_detail_label">Label Detail</string>
+    <string name="lbl_stock_adjustmen">Nama Stock Opname</string>
+    <string name="menu_tools">Add On</string>
+    <string name="menu_manage_stock">Kelola stok</string>
+    <string name="menu_health">Menu kesehatan</string>
+    <string name="menu_sellreturn">Pengembalian Penjualan</string>
+    <string name="money_return">Pengembalian uang</string>
+    <string name="lbl_detail_productsreturn">Kembalikan Daftar Produk</string>
+    <string name="lbl_detail_totalreturn">Total Pengembalian</string>
+    <string name="lbl_invoice">Nomor Faktur</string>
+
+
+    <string name="lbl_stock_opname_title">Stock Opname</string>
+    <string name="lbl_stock_opname_info">Perbaharui stok fisik anda di aplikasi</string>
+    <string name="lbl_transfer_product_title">Transfer Goods</string>
+    <string name="lbl_transfer_product_info">Transfer barang dari pusat ke cabang</string>
+    <string name="lbl_stock_history_title">Riwayat Stock</string>
+    <string name="lbl_stock_history_info">Melihat pergerakan saham Anda</string>
+    <string name="menu_edit_stock">Edit Stok</string>
+    <string name="lbl_stock_actual">Stok fisik sebenarnya</string>
+    <string name="lbl_store_des">Toko Tujuan</string>
+    <string name="lbl_data_transfer_title">Transfer Data</string>
+    <string name="lbl_data_transfer_info">Periksa Riwayat Transfer Masuk dan Keluar</string>
+    <string name="lbl_transfer_in">Transfer Masuk</string>
+    <string name="lbl_transfer_out">Transfer Keluar</string>
+    <string name="lbl_finish_transfer">Selesai</string>
+    <string name="tracking_stock">Melacak Stok</string>
+    <string name="lbl_job_management_title">Manajemen Pekerjaan</string>
+    <string name="lbl_job_management_info">Pantau dan lacak Pekerjaan yang ditetapkan</string>
+    <string name="lbl_link_tracking_title">Link Bisnis</string>
+    <string name="lbl_link_tracking_info">Informasi Link untuk bisnis Anda</string>
+    <string name="lbl_print_receipt_title">Buat Resep</string>
+    <string name="lbl_print_receipt_info">Buat Resep untuk pasien</string>
+    <string name="lbl_medical_record">Rekam Medis</string>
+    <string name="lbl_medical_record_info">Periksa riwayat medis pasien</string>
+    <string name="btn_share_link">Link Order</string>
+    <string name="lbl_link_online_store">Link Toko Online</string>
+    <string name="lbl_link_signup_patient">Link Pendaftaran Pasien Baru</string>
+    <string name="note_signup_patient">Berikan atau pasang Link ini untuk pendaftaran Pasien baru Anda, Anda bisa melihat data pasien di menu Manajemen, Kelola Pasien</string>
+    <string name="lbl_link_order_screen">Link Layar Pemesanan</string>
+    <string name="note_order_screen_lbl">Link ini bisa dipasang di belakang kasir atau di dapur untuk Informasi Order yang masuk</string>
+    <string name="lbl_customercode">ID Pelanggan</string>
+    <string name="lbl_patient">Nama Pasien</string>
+    <string name="lbl_complaint_patient">Keluhan Pasien</string>
+    <string name="lbl_doctor_advce">Saran Dokter</string>
+    <string name="lbl_name_staff">Nama Staff</string>
+
+    <string name="lbl_type_store">Jenis Toko</string>
+    <string name="salary_slip">Slip gaji</string>
+    <string name="retrive">Pemulihan data offline</string>
+    <string name="sync_lbl">Sinkronisasi basis data</string>
+    <string name="db_name">Database</string>
+    <string name="financial_stts">Laporan Keuangan</string>
+    <string name="gros_sales">Penjualan Kotor</string>
+    <string name="cancelation">Pembatalan</string>
+    <string name="net_sales">Penjualan bersih</string>
+    <string name="admin_srv">Admin / Biaya Layanan</string>
+    <string name="prof_loss_sts">Laporan Keuangan Laba/Rugi</string>
+    <string name="hpp_lbl">Harga Pokok Penjualan</string>
+    <string name="gros_profit">laba kotor</string>
+    <string name="total_lbl">Total</string>
+    <string name="sales_confirm">Konfirmasi Penjualan</string>
+    <string name="lbl_decimal_type">Format mata uang</string>
+    <string name="chose_unit">Pilih Satuan</string>
+    <string name="err_empty_unit">Satuan harus dipilih</string>
+    <string name="customer_support">Dukungan Pelanggan</string>
+    <!-- TODO: Hapus atau ubah teks placeholder ini -->
+    <string name="hello_blank_fragment">Halo fragmen kosong</string>
+    <string name="lbl_bank_transfer">Transfer Bank</string>
+    <string name="lbl_pos_payment">Pembayaran POS</string>
+    <string name="btn_add_discountplus">+ tambahkan Diskon</string>
+    <string name="lbl_manage_role_title">Manajemen Peran</string>
+    <string name="lbl_manage_role_info">" Kelola Manajemen Peran Anda!"</string>
+    <string name="menu_role">Manajemen Peran</string>
+    <string name="menu_edit_role">Edit Peran</string>
+    <string name="lbl_reason">Alasan</string>
+    <string name="lbl_product_report">Laporan Laba Rugi</string>
+    <string name="lbl_report_product_info">Cek Laporan Laporan Laba Rugi Produk</string>
+    <string name="lbl_produdt_sold">Produk Terjual</string>
+    <string name="lbl_laba">Total Keuntungan</string>
+    <string name="lbl_profit">Laba Rugi</string>
+    <string name="menu_ppob">Pulsa &amp; PPOB</string>
+
+    <string name="lbl_saldo">Sisa Saldo</string>
+    <string name="tab_pulsappob"><![CDATA[Pulsa & PPOB]]></string>
+    <string name="lbl_pulsa">Pulsa</string>
+    <string name="lbl_insert_number">Insert Number</string>
+    <string name="lbl_insert_number_info">Masukkan Nomor telpon atau nomor Meteran untuk PLN atau ID Game Untuk Order game pada Form dibawah</string>
+    <string name="lbl_order">Order now</string>
+    <string name="lbl_insert_pin">Insert Your PIN</string>
+    <string name="err_number">Nomor Yang anda masukkan kurang</string>
+    <string name="lbl_smstelpon"><![CDATA[SMS & Telpon]]></string>
+    <string name="lbl_paketdata">Paket Data</string>
+    <string name="lbl_plntoken">Token PLN</string>
+    <string name="lbl_emoney">E-Money</string>
+    <string name="lbl_listproduct">List Product</string>
+    <string name="lbl_voucher">Voucher</string>
+    <string name="lbl_games">Games</string>
+    <string name="lbl_pln">PLN</string>
+    <string name="lbl_pdam">PDAM</string>
+    <string name="lbl_bpjs">BPJS</string>
+    <string name="lbl_telpon">Pascabayar</string>
+    <string name="lbl_internet">Internet</string>
+    <string name="lbl_multipayment">MultiPayment</string>
+    <string name="lbl_totalsaldo">Sisa Saldo</string>
+    <string name="lbl_insert_number_ppob">Masukkan Nomor Pelanggan pada Form dibawah dan klik Cek tagihan</string>
+    <string name="btn_check">Cek Tagihan</string>
+    <string name="lbl_nama_pelanggan">Nama Pelanggan</string>
+    <string name="lbl_nomor_pelanggan">Nomor Pelanggan</string>
+    <string name="lbl_nama_produk">Nama Produk</string>
+    <string name="lbl_harga">Tagihan</string>
+    <string name="err_pin_empty">PIN tidak boleh kosong</string>
+    <string name="uang">💰</string>
+    <string name="lbl_produk_packages_title">Paket produk</string>
+    <string name="lbl_manage_produk_packages_info">Kelola paket produk</string>
+    <string name="lbl_price_packages">Harga Paket</string>
+    <string name="lbl_name_packages">Nama Paket</string>
+    <string name="pre_order">Pre Order</string>
+    <string name="lbl_info_po_report">Laporan Produk pre Order</string>
+    <string name="pre_order_report">Laporan Produk pre Order</string>
+    <string name="lbl_cashflow">Arus Kas</string>
+    <string name="lbl_report_cashflow_info">Periksa Perkembangan Arus Kas Anda</string>
+    <string name="lbl_total_purchase">Total Pembelian</string>
+    <string name="lbl_omset_report">Total Omset</string>
+    <string name="lbl_total_spending">Total Pengeluaran</string>
+    <string name="lbl_total_return">Total Pengembalian</string>
+    <string name="lbl_search_cashflow">Cari Transaksi</string>
+    <string name="menu_edit_variant_price">Edit Price Variant</string>
+    <string name="lbl_price_variant">Price Variant</string>
+    <string name="lbl_minimal_order">Minimal Order</string>
+    <string name="lbl_manage_raw_material_title">Kelola Bahan Baku</string>
+    <string name="lbl_manage_rawmaterial_info">Kelola Bahan baku toko Anda</string>
+    <string name="lbl_recipe" translatable="false">Resep produk</string>
+    <string name="lbl_stock_use" translatable="false">Stok yang digunakan</string>
+    <string name="lbl_detail_recipe" translatable="false">Detail Resep</string>
+
+    <string name="menu_add_material" translatable="false">Tambahkan Bahan Baku</string>
+    <string name="lbl_input_name_matrial_title" translatable="false">Nama Bahan Baku</string>
+    <string name="lbl_input_price_material_title" translatable="false">Harga</string>
+    <string name="menu_edit_material" translatable="false">Edit Bahan Baku</string>
+    <string name="lbl_manage_raw_materialstock_title">Stok Bahan Baku</string>
+    <string name="lbl_manage_rawmaterialstock_info">Kelola Stok Bahan Baku Anda!</string>
+    <string name="lbl_purchase_raw_materialstock_title">Belanja Bahan Baku</string>
+    <string name="lbl_purchase_rawmaterialstock_info">Belanja Bahan Baku toko Anda</string>
+    <string name="raw_material_report">Laporan Bahan Baku</string>
+    <string name="lbl_report_raw_materialstock_title">Laporan Belanja Bahan Baku</string>
+    <string name="lbl_report_rawmaterialstock_info">Laporan Belanja Bahan Baku toko</string>
+    <string name="lbl_hour">Jam Acara</string>
+    <string name="lbl_location">Lokasi Pengiriman</string>
+    <string name="not_paid">Belum dibayar</string>
+    <string name="lbl_dp">Uang muka</string>
+    <string name="lbl_search_packages">Cari Paket</string>
+    <string name="menu_edit_packages">Edit Paket</string>
+    <string name="lbl_return_transfer_title">Transfer Return</string>
+    <string name="lbl_return_transfer_info">Buat Pengembalian Transfer Barang</string>
+    <string name="transfer_return">Transfer Return</string>
+    <string name="lbl_prof_return">Proof of Return</string>
+    <string name="lbl_return_to">Returned to</string>
+    <string name="lbl_ongkir">Ongkos Kirim</string>
+    <string name="lbl_manage_ongkir_info">Kelola Ongkos Kirim</string>
+    <string name="lbl_nominal_ongkir">Nominal Ongkir</string>
+    <string name="hint_empty_ongkir">Kosongkan jika tanpa ongkir</string>
+    <string name="lbl_name_ongkir">Lokasi</string>
+    <string name="lbl_name_divisi">Nama Divisi</string>
+    <string name="hint_empty_divisi">Kosongkan jika tanpa divisi</string>
+    <string name="lbl_manage_divisi_title">Kelola Divisi</string>
+    <string name="lbl_manage_divisi_info">Kelola Divisi Toko Anda</string>
+    <string name="btn_update">Ubah</string>
+</resources>

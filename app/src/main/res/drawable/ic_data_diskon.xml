@@ -1,0 +1,35 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="50dp"
+    android:height="50dp"
+    android:viewportWidth="50"
+    android:viewportHeight="50">
+  <path
+      android:pathData="m49.9953,25.0661c0,13.8009 -11.1991,25 -25,25 -13.8009,0 -25,-11.1991 -25,-25 0,-13.8009 11.1991,-25 25,-25 13.8009,0 25,11.1991 25,25z"
+      android:strokeWidth="0.1767547"
+      android:fillColor="#37c8ab"
+      android:strokeColor="#00000000"
+      android:fillType="nonZero"
+      android:fillAlpha="1"/>
+  <path
+      android:pathData="m36.567,10.6919l-9.3957,0a2.8243,2.9349 90,0 0,-2.0741 0.8383L8.0688,27.8872a2.8742,2.9867 89.9999,0 0,0 4.0419l9.5616,9.2015a2.8542,2.966 90.0001,0 0,4.2001 0L38.8071,24.7835a2.8443,2.9556 90,0 0,0.8711 -2.0559L39.533,13.5062A2.8542,2.966 90.0001,0 0,36.567 10.6919ZM34.1611,18.1868a1.996,2.0741 90,1 1,2.0741 -2.0459,1.996 2.0741,90 0,1 -2.0741,2.0459z"
+      android:strokeLineJoin="round"
+      android:strokeWidth="2"
+      android:strokeColor="@color/bg_gray"
+      android:strokeLineCap="round">
+    <aapt:attr name="android:fillColor">
+      <gradient 
+          android:startY="14.224749"
+          android:startX="23.437933"
+          android:endY="40.50179"
+          android:endX="23.437933"
+          android:type="linear">
+        <item android:offset="0" android:color="@color/white"/>
+        <item android:offset="1" android:color="@color/white"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+  <path
+      android:pathData="m23.9876,19.5839a1.0008,1.04 90,1 0,-2.0741 0.1497l1.0371,13.3431a0.998,1.0371 90,0 0,1.1096 0.9181,0.998 1.0371,90 0,0 0.9645,-0.998 0.1896,0.197 90,0 0,0 -0.0798zM29.3077,22.518a2.994,3.1112 90,1 0,3.1112 2.994,2.994 3.1112,90 0,0 -3.1112,-2.994zM29.3077,26.51a0.998,1.0371 90,1 1,1.0371 -0.998,0.998 1.0371,90 0,1 -1.0371,0.998zM17.5682,23.8254a2.994,3.1112 90,1 0,3.1112 2.994,2.994 3.1112,90 0,0 -3.1112,-2.994zM17.5682,27.8174a0.998,1.0371 90,1 1,1.0371 -0.998,0.998 1.0371,90 0,1 -1.0371,0.998z"
+      android:fillColor="@color/bg_header_success"/>
+</vector>

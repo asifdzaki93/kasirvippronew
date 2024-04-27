@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="16dp">
+
+    <View
+            android:layout_width="56dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rounded_home_more_menu"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Select Date"
+                    android:textColor="@color/primaryText"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+            />
+
+            <ImageView
+                    android:id="@+id/close_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_close"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard_margin_2x"
+            app:mcv_selectionColor="@color/colorAccent"
+            app:mcv_selectionMode="range"
+            app:mcv_showOtherDates="other_months|out_of_range"
+            />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard_margin_2x"
+            android:orientation="horizontal">
+        <LinearLayout
+                android:id="@+id/ll_awal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_weight="1"
+                android:orientation="vertical">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="From date"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/caption"
+                    android:textStyle="bold"/>
+            <TextView
+                    android:id="@+id/tv_awal"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="@dimen/standard_xsmall_margin"
+                    android:background="@drawable/rounded_gray_4dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/caption"
+                    />
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/ll_akhir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_weight="1"
+                android:orientation="vertical">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="To Date"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/caption"
+                    android:textStyle="bold"/>
+            <TextView
+                    android:id="@+id/tv_akhir"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="@dimen/standard_xsmall_margin"
+                    android:background="@drawable/rounded_gray_4dp"
+                    android:gravity="center"
+                    android:padding="@dimen/standard_small_margin"
+                    android:text=""
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/caption"
+                    />
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/caption"
+                    android:textStyle="bold"/>
+            <TextView
+                    android:id="@+id/btn_save"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="80dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="@dimen/standard_xsmall_margin"
+                    android:background="@drawable/selector_btn_orange"
+                    android:gravity="center"
+                    android:padding="@dimen/standard_small_margin"
+                    android:text="Apply"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/caption"
+                    />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

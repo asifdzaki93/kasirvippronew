@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/divider" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:padding="@dimen/standard_margin_1.5x">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_detail_operator"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/tv_operator"
+                android:text="content"
+                android:layout_marginRight="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:padding="@dimen/standard_margin_1.5x">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_store_name"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/tv_name_store"
+                android:text="content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/primaryText"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:padding="@dimen/standard_margin_1.5x">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_period"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/tv_date"
+                android:text="content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/primaryText"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingLeft="@dimen/standard_margin_2x"
+        android:paddingRight="@dimen/standard_margin_2x"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="5dp"
+        android:padding="@dimen/standard_margin_1.5x"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/lbl_sales_cash"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/tv_cash"
+            android:text="content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/body"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/colorPrimaryDark"/>
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:paddingLeft="@dimen/standard_margin_2x"
+        android:paddingRight="@dimen/standard_margin_2x"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="5dp"
+        android:padding="@dimen/standard_margin_1.5x"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/lbl_sales_debt"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/tv_sales_debt"
+            android:text="content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/body"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/colorPrimaryDark"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingLeft="@dimen/standard_margin_2x"
+        android:paddingRight="@dimen/standard_margin_2x"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="5dp"
+        android:padding="@dimen/standard_margin_1.5x"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/lbl_bank_transfer"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/tv_bank_transfer"
+            android:text="content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/body"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/colorPrimaryDark"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingLeft="@dimen/standard_margin_2x"
+        android:paddingRight="@dimen/standard_margin_2x"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="5dp"
+        android:padding="@dimen/standard_margin_1.5x"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/lbl_pos_payment"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/tv_pos_payment"
+            android:text="content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/body"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/colorPrimaryDark"/>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:paddingLeft="@dimen/standard_margin_2x"
+        android:paddingRight="@dimen/standard_margin_2x"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="5dp"
+        android:padding="@dimen/standard_margin_1.5x"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/lbl_detail_subtotal"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/tv_total"
+            android:text="content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/body"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/primaryText"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/divider"
+        android:layout_marginBottom="10dp"/>
+
+</LinearLayout>

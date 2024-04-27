@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingTop="@dimen/standard_margin"
+		android:paddingBottom="@dimen/standard_margin">
+	<TextView
+			android:layout_gravity="center"
+			android:id="@+id/tv_name"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:textSize="@dimen/subheading"
+			android:textColor="@color/primaryText"
+			tools:text="Provinsi"
+			/>
+	<ImageView
+			android:layout_gravity="center"
+			android:id="@+id/iv_check"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:srcCompat="@drawable/ic_check"
+			/>
+</LinearLayout>

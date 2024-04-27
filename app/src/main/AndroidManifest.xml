@@ -1,0 +1,995 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="id.kasirvippro.android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <uses-feature
+            android:name="android.hardware.camera"
+            android:required="true" />
+
+    <application
+            android:name="id.kasirvippro.android.MyApplication"
+            android:allowBackup="true"
+            android:hardwareAccelerated="true"
+            android:icon="@mipmap/ic_launcher"
+            android:roundIcon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:largeHeap="true"
+            android:networkSecurityConfig="@xml/network_security_config"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:requestLegacyExternalStorage="true"
+            android:usesCleartextTraffic="true"
+            tools:targetApi="n">
+
+
+
+        <!-- This meta-data tag is required to use Google Play Services. -->
+        <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+        <meta-data
+                android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+                android:value="true"/>
+        <activity
+                android:name="com.google.android.gms.ads.AdActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                android:theme="@android:style/Theme.Translucent" />
+
+        <meta-data
+                android:name="firebase_crashlytics_collection_enabled"
+                android:value="${crashlyticsEnabled}"/>
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@drawable/ic_logo_white"/>
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_color"
+                android:resource="@color/colorPrimary"/>
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_channel_id"
+                android:value="@string/default_notification_channel_id"/>
+
+        <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="id.kasirvippro.android.provider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/file_paths"
+                    tools:replace="android:resource" />
+        </provider>
+
+        <service
+                android:name="id.kasirvippro.android.services.notification.FirebaseMessagingService"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <activity
+                android:name="id.kasirvippro.android.feature.intro.IntroActivity"
+                android:label="@string/app_name"
+                android:noHistory="true"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                        android:scheme="https"
+                        android:host="www.fipos.id" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                        android:scheme="http"
+                        android:host="www.fipos.id" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                        android:scheme="https"
+                        android:host="fipos.id" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                        android:scheme="http"
+                        android:host="fipos.id" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="id.kasirvippro.android.feature.login.LoginActivity"
+                android:theme="@style/ReverseAppTheme.NoActionBar"
+                android:screenOrientation="fullSensor" />
+
+        <activity
+                android:name="id.kasirvippro.android.feature.register.RegisterActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+
+        <activity
+                android:name="id.kasirvippro.android.feature.main.MainActivity"
+                android:theme="@style/AppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.product.list.ProductListActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manageStock.stockOpname.list.StockOpnameListActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manageStock.stockHistory.list.StockHistoryListActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manageStock.stockOpname.edit.EditStockOpnameActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.productVariant.list.ProductVariantListActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.store.list.StoreListActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.category.list.CategoryListActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.role.list.RoleListActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.discount.list.DiscountListActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.customer.list.CustomerListActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.supplier.list.SupplierListActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.category.add.AddCategoryActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.product.addCategory.AddCategoryActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.category.edit.EditCategoryActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.role.edit.EditRoleActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.supplier.add.AddSupplierActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.supplier.edit.EditSupplierActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.supplier.detail.DetailActivity"
+                android:theme="@style/ReverseAppTheme.NoActionBar"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.customer.add.AddCustomerActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.customer.edit.EditCustomerActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.customer.detail.CustomerDetailActivity"
+                android:theme="@style/ReverseAppTheme.NoActionBar"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.scan.ScanCodeActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.product.add.AddProductActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.productVariant.add.AddProductVariantActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.product.edit.EditProductActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.productVariant.edit.EditProductVariantActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.transaction.detail.DetailActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.hutangpiutang.main.MainActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.hutangpiutang.lastHutang.LastHutangActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.hutangpiutang.lastPiutang.LastPiutangActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.hutangpiutang.hutangSupplier.HutangSupplierActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.hutangpiutang.piutangCustomer.PiutangCustomerActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.hutangpiutang.detailHutang.DetailHutangActivity"
+                android:theme="@style/ReverseAppTheme.NoActionBar"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.hutangpiutang.detailPiutang.DetailPiutangActivity"
+                android:theme="@style/ReverseAppTheme.NoActionBar"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.choose.product.ChooseProductActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.printer.PrinterActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+
+        <activity
+                android:name="id.kasirvippro.android.feature.printerDaily.PrinterDailyActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.printerSumary.PrinterSumaryActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.choose.customer.ChooseCustomerActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.choose.kurir.ChooseKurirActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.choose.decimal.ChooseDecimalActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.sell.addCustomer.AddCustomerActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.sell.addDiscount.AddActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.order.addNewCustomer.AddNewCustomerActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.transaction.success.SuccessActivity"
+                android:theme="@style/ReverseAppTheme.NoActionBar"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.transaction.successReturn.SuccessActivity"
+                android:theme="@style/ReverseAppTheme.NoActionBar"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.kulakan.main.KulakanActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.transfer.main.TransferActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.addOn.recipe.main.RecipeActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.sell.main.SellActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:launchMode="singleInstance"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.sellReturn.main.SellReturnActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:launchMode="singleInstance"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.choose.supplier.ChooseSupplierActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.choose.typestore.ChooseTypestoreActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.report.transaction.TransactionActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.report.mutasi.MutasiActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.report.produk.ProdukActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.setting.account.AccountActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.setting.password.PasswordActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.staff.list.StaffListActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.staff.add.AddStaffActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.staff.edit.EditStaffActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.main.ManageActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manageStock.main.ManageStockActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.manageStock.dataHistory.DataHistoryActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+
+        <activity
+                android:name="id.kasirvippro.android.feature.addOn.workManagement.dataHistory.DataHistoryActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+
+        <activity
+                android:name="id.kasirvippro.android.feature.addOn.workManagement.transaction.TransactionListActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name="id.kasirvippro.android.feature.manageOrder.main.ManageOrderActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name="id.kasirvippro.android.feature.afiliate.mains.ManageAfiliateActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name="id.kasirvippro.android.feature.afiliate.main.AfiliateActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.afiliate.list.NetworkListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.afiliate.subList.NetworkSubListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.afiliate.detailAfiliate.DetailAfiliateActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+                android:name="id.kasirvippro.android.feature.etalase.main.EtalaseActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.report.main.ReportActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+
+        <activity
+                android:name="id.kasirvippro.android.feature.history.main.HistoryActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.filterDate.main.MainActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/TransparentCompat"/>
+
+        <activity
+                android:name="id.kasirvippro.android.feature.choose.color.ChooseColorActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+
+        <activity
+                android:name="id.kasirvippro.android.feature.choose.unit.ChooseUnitActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.etalase.kelolatoko.list.KelolatokoListActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.etalase.kelolatoko.edit.kelolatokoEditActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.discount.add.AddActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.discount.edit.EditActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.store.add.AddActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.manage.store.edit.StoreActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.choose.store.ChooseStoreActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+
+        <activity
+                android:name="id.kasirvippro.android.feature.spend.add.AddActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+
+        <activity
+                android:name="id.kasirvippro.android.feature.sell.add.AddActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.spend.main.SpendActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.sell.confirmation.ConfirmationActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.sellReturn.confirmation.ConfirmationActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.choose.discount.ChooseDiscountActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.transaction.detailSpend.DetailSpendActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.transaction.detailReturn.DetailReturnActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.report.slip.slip.SlipActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.report.slip.chooseMonth.MonthActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.report.slip.chooseStaff.ChooseStaffActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.report.keuangan.KeuanganActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.report.penjualan.PenjualanActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.report.daily.DailyActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.webview.WebViewActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.update.UpdateActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme.NoActionBar"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.maintenance.MaintenanceActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme.NoActionBar"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.choose.nonTunai.ChooseNonTunaiActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+
+        <activity
+                android:name="id.kasirvippro.android.feature.sell.paymentNonTunai.WebViewActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.report.absent.AbsentActivity"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/ReverseAppTheme"/>
+        <activity
+                android:name="id.kasirvippro.android.feature.addOn.linkStore.LinkStoreActivity"
+                android:theme="@style/AppTheme"
+                android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.qrCode.QrCodeActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+                android:name="id.kasirvippro.android.feature.forgot.ForgotActivity"
+                android:theme="@style/ReverseAppTheme"
+                android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name="id.kasirvippro.android.feature.addOrder.main.AddOrderActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:launchMode="singleInstance"
+            android:screenOrientation="fullSensor" />
+
+
+        <activity android:name="id.kasirvippro.android.feature.choose.addProduct.ActivityProductNew"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"
+            android:configChanges="keyboardHidden|orientation|screenSize|density|uiMode" />
+
+
+        <activity android:name="id.kasirvippro.android.feature.choose.addProduct.ActivityCategory"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity android:name="id.kasirvippro.android.feature.choose.addProduct.ActivitySubCategory"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity android:name="id.kasirvippro.android.feature.choose.orderProduct.ActivitySubCategory"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.choose.productAdd.ChooseProductActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name="id.kasirvippro.android.feature.transaction.successadd.SuccessAddActivity"
+            android:theme="@style/ReverseAppTheme.NoActionBar"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name="id.kasirvippro.android.feature.transaction.detailSplit.DetailActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name="id.kasirvippro.android.feature.choose.newProduct.ActivityProductNew"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"
+            android:configChanges="keyboardHidden|orientation|screenSize|density|uiMode" />
+        <activity
+            android:name="id.kasirvippro.android.feature.choose.newProduct.ActivityCategory"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.choose.orderProduct.ActivityCategory"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.choose.newProduct.ActivitySubCategory"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.hotNews.view.ViewNewsActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.hotNews.list.NewsListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.choose.productPurchase.ChooseProductPurchaseActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.choose.productPackages.ChooseProductPackagesActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.initial.InitialActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.choose.sift.ChooseSiftActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.shift.closingShift.list.ClosingShiftListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.shift.closingShift.detail.ClosingShiftDetailActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.choose.table.ChooseTableActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/ReverseAppTheme"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.choose.tableActive.ChooseTableActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/ReverseAppTheme"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.table.list.TableListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.manageOrder.table.list.TableListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.table.add.AddTableActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.table.edit.EditTableActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.manageOrder.moveTable.edit.EditMoveTableActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.manageOrder.joinTable.edit.EditJoinTableActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.manageOrder.menuOrder.MenuOrderActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name="id.kasirvippro.android.feature.manageOrder.kitchen.main.DataOrderActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name="id.kasirvippro.android.feature.manageStock.dataTransfer.main.DataTransferActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name="id.kasirvippro.android.feature.addOn.main.AddOnActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.manageOrder.splitOrder.list.SplitListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.manageOrder.moveTable.list.MoveTableListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.manageOrder.joinTable.list.JoinTableListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.order.main.OrderActivity"
+            android:screenOrientation="fullSensor"
+            android:launchMode="singleInstance"
+            android:theme="@style/ReverseAppTheme" />
+        <activity
+            android:name="id.kasirvippro.android.feature.choose.productOrder.ChooseProductActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name="id.kasirvippro.android.feature.label.main.LabelActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.label.confirmation.ConfirmationLabelActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.printerLabel.PrinterLabelActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.transaction.successLabel.SuccessLabelActivity"
+            android:theme="@style/ReverseAppTheme.NoActionBar"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.transaction.detailLabel.DetailLabelActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.transaction.detailTransfer.DetailTransferActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.addOn.workManagement.list.StaffListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.addOn.medicalHistory.list.MedicalHistoryListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.addOn.dataMedical.DataHistoryActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name="id.kasirvippro.android.feature.pulsaPpob.main.PulsaPpobActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.pulsaPpob.pulsa.PulsaActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.pulsaPpob.smsTelpon.SmsTelponActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.pulsaPpob.paketData.PaketDataActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.pulsaPpob.tokenPln.TokenPlnActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.pulsaPpob.productPpob.ProductPpobActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.pulsaPpob.dataProduct.DataProductActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.pulsaPpob.dataPpob.DataPpobActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.pulsaPpob.detailProduct.DetailProductActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.pulsaPpob.order.OrderActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.packages.main.PackagesActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.report.preOrder.main.PreOrderActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.report.cashflow.main.CashflowActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.report.cashFLow.dataChart.ListChartActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.priceVariant.add.AddPriceVariantActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.priceVariant.edit.EditPriceVariantActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.priceVariant.list.PriceVariantListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.rawMaterial.list.RawMaterialListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.manageStock.stockRawMaterial.list.StockRawMaterialListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.manageStock.stockHistoryRawMaterial.list.StockHistoryListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.manageStock.stockHistoryRawMaterial.data.DataHistoryActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.manageStock.stockRawMaterial.edit.EditStockRawMaterialActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.rawMaterial.add.AddRawMaterialActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.rawMaterial.edit.EditRawMaterialActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.recipe.add.AddRecipeActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.recipe.edit.EditRecipeActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.recipe.list.RecipeListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.choose.rawMaterial.ChooseRawMaterialActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.purchaseMaterial.main.PurchaseMaterialActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.report.rawMaterial.main.RawMaterialActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.packages.edit.EditPackagesActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.packages.list.PackagesListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.packages.add.AddPackagesActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.packages.item.PackagesItemActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.transferReturn.main.TransferReturnActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.transferReturn.confirmation.ConfirmationActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.transaction.detailReturnTransfer.DetailReturnActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.ongkir.list.OngkirListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.ongkir.add.AddOngkirActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.ongkir.edit.EditOngkirActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.choose.ongkir.ChooseOngkirActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.divisi.add.AddDivisiActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.divisi.edit.EditDivisiActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.manage.divisi.list.DivisiListActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="id.kasirvippro.android.feature.choose.divisi.ChooseDivisiActivity"
+            android:theme="@style/ReverseAppTheme"
+            android:screenOrientation="fullSensor"/>
+    </application>
+</manifest>

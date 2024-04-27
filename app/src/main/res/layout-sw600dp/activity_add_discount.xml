@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/standard_margin_3x"
+                    android:paddingRight="@dimen/standard_margin_3x">
+
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/standard_margin_2x"
+                        android:text="Discount Code"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/subtitle" />
+
+                <EditText
+                        android:id="@+id/et_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standart_input_height"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/standard_small_margin"
+                        android:background="@android:color/transparent"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+                        android:inputType="textCapCharacters"
+                        android:textColor="@color/primaryText"
+                        android:textColorHint="@color/secondaryText"
+                        android:textSize="@dimen/subtitle" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/standard_margin_2x"
+                        android:text="Information"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/subtitle" />
+
+                <EditText
+                        android:id="@+id/et_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standart_input_height"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/standard_small_margin"
+                        android:background="@android:color/transparent"
+                        android:ellipsize="end"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:scrollbars="none"
+                        android:textColor="@color/primaryText"
+                        android:textColorHint="@color/secondaryText"
+                        android:textSize="@dimen/subtitle" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
+
+                <LinearLayout
+                        android:layout_marginTop="@dimen/standard_margin_2x"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <LinearLayout
+                            android:padding="1dp"
+                            android:background="@color/colorAccent"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:id="@+id/btn_rp"
+                                android:background="@color/colorAccent"
+                                android:gravity="center"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:textSize="@dimen/heading"
+                                android:textStyle="bold"
+                                android:text="@string/currency_discount"
+                                android:textColor="@color/white"/>
+                        <TextView
+                                android:id="@+id/btn_persen"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:textSize="@dimen/heading"
+                                android:textStyle="bold"
+                                android:text="%"
+                                android:textColor="@color/colorAccent"/>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:layout_marginLeft="@dimen/standard_margin_2x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Nominal"
+                                android:textColor="@color/secondaryText"
+                                android:textSize="@dimen/subtitle" />
+
+                        <EditText
+                                android:id="@+id/et_nominal"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/standart_input_height"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/standard_small_margin"
+                                android:background="@android:color/transparent"
+                                android:ellipsize="end"
+                                android:inputType="number"
+                                android:digits="0123456789."
+                                android:maxLines="1"
+                                android:scrollbars="none"
+                                android:textColor="@color/primaryText"
+                                android:textColorHint="@color/secondaryText"
+                                android:textSize="@dimen/subtitle" />
+
+                        <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/divider" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_save"
+                        android:layout_width="@dimen/standart_button_width"
+                        android:layout_height="66dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/standard_margin_4x"
+                        android:layout_marginBottom="@dimen/standard_margin_2x"
+                        android:gravity="center"
+                        android:text="@string/btn_save"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/subtitle"
+                        android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider" />
+
+
+    </FrameLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

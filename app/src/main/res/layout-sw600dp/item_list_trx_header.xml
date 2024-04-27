@@ -1,0 +1,1742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_gray">
+    <LinearLayout
+        android:id="@+id/ll_detail"
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/standard_margin_2x">
+
+    <TextView
+        android:id="@+id/tv_header_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/title"
+        android:textColor="@color/primaryText"/>
+    <TextView
+        android:layout_marginLeft="@dimen/standard_margin"
+        android:gravity="right"
+        android:id="@+id/tv_header_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/title"
+        android:textColor="@color/primaryText"
+        android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_small_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_small_margin"
+            android:layout_weight="2"
+            android:background="@drawable/rounded_gray_4dp"
+            android:gravity="center"
+            android:paddingLeft="@dimen/standard_margin_2x"
+            android:paddingTop="@dimen/standard_margin"
+            android:paddingRight="@dimen/standard_margin_2x"
+            android:paddingBottom="@dimen/standard_margin"
+            android:text="VIEW CHART"
+            android:textColor="@color/vermillion"
+            android:textSize="@dimen/title"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:id="@+id/btn_next"
+        android:background="@color/gray_hard"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/menu_report"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/body"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals1"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_2"
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals2"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals3"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals4"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals5"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals6"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals7"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals8"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals9"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals10"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals11"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals12"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals13"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals14"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals15"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals16"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals17"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals18"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals19"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals20"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals21"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals22"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals23"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals24"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals25"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals26"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals27"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals28"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals29"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals30"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/selector_white"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_xsmall_margin"
+                android:id="@+id/tv_ids31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/primaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_gravity="right"
+                android:id="@+id/tv_totals31"
+                android:paddingTop="@dimen/standard_small_margin"
+                android:paddingBottom="@dimen/standard_small_margin"
+                android:paddingLeft="@dimen/standard_margin_2x"
+                android:paddingRight="@dimen/standard_margin_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/body"
+                android:textColor="@color/white"
+                android:text="Paid off"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_orange_4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

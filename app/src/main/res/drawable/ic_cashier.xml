@@ -1,0 +1,63 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="512dp"
+    android:height="512dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+  <path
+      android:pathData="m59,43v-18a2.006,2.006 0,0 0,-2 -2v-4h-22v4h-28a2.006,2.006 0,0 0,-2 2v18l-2,10h58zM13,39h-4v-4h4zM13,31h-4v-4h4zM21,39h-4v-4h4zM21,31h-4v-4h4zM29,39h-4v-4h4zM29,31h-4v-4h4zM37,39h-4v-4h4zM37,31h-4v-4h4z"
+      android:fillColor="@color/colorPrimaryLight"/>
+  <path
+      android:pathData="m24,14h2v2h-2z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m9,32h4a1,1 0,0 0,1 -1v-4a1,1 0,0 0,-1 -1h-4a1,1 0,0 0,-1 1v4a1,1 0,0 0,1 1zM10,28h2v2h-2z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m9,40h4a1,1 0,0 0,1 -1v-4a1,1 0,0 0,-1 -1h-4a1,1 0,0 0,-1 1v4a1,1 0,0 0,1 1zM10,36h2v2h-2z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m25,40h4a1,1 0,0 0,1 -1v-4a1,1 0,0 0,-1 -1h-4a1,1 0,0 0,-1 1v4a1,1 0,0 0,1 1zM26,36h2v2h-2z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m25,32h4a1,1 0,0 0,1 -1v-4a1,1 0,0 0,-1 -1h-4a1,1 0,0 0,-1 1v4a1,1 0,0 0,1 1zM26,28h2v2h-2z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m17,40h4a1,1 0,0 0,1 -1v-4a1,1 0,0 0,-1 -1h-4a1,1 0,0 0,-1 1v4a1,1 0,0 0,1 1zM18,36h2v2h-2z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m17,32h4a1,1 0,0 0,1 -1v-4a1,1 0,0 0,-1 -1h-4a1,1 0,0 0,-1 1v4a1,1 0,0 0,1 1zM18,28h2v2h-2z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m33,32h4a1,1 0,0 0,1 -1v-4a1,1 0,0 0,-1 -1h-4a1,1 0,0 0,-1 1v4a1,1 0,0 0,1 1zM34,28h2v2h-2z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m33,40h4a1,1 0,0 0,1 -1v-4a1,1 0,0 0,-1 -1h-4a1,1 0,0 0,-1 1v4a1,1 0,0 0,1 1zM34,36h2v2h-2z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m40,26h16v2h-16z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m40,30h16v2h-16z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m40,34h16v2h-16z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m40,38h16v2h-16z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m61.98,52.8 l-1.98,-9.9v-17.9a3.01,3.01 0,0 0,-2 -2.82v-3.18a1,1 0,0 0,-1 -1v-15a1,1 0,0 0,-0.57 -0.9,0.981 0.981,0 0,0 -1.05,0.12l-1.88,1.5 -1.89,-1.5a0.992,0.992 0,0 0,-1.24 0l-1.88,1.5 -1.88,-1.5a1.007,1.007 0,0 0,-1.25 0l-1.87,1.5 -1.87,-1.5a1.007,1.007 0,0 0,-1.25 0l-1.87,1.5 -1.88,-1.5a0.981,0.981 0,0 0,-1.05 -0.12,1 1,0 0,0 -0.57,0.9v15a1,1 0,0 0,-1 1v3h-11v-2h6a1,1 0,0 0,1 -1v-16a1,1 0,0 0,-1 -1h-22a1,1 0,0 0,-1 1v16a1,1 0,0 0,1 1h5v2h-5a3.009,3.009 0,0 0,-3 3v17.9l-1.98,9.9a1.355,1.355 0,0 0,-0.02 0.2v8a1,1 0,0 0,1 1h58a1,1 0,0 0,1 -1v-8a1.355,1.355 0,0 0,-0.02 -0.2zM58.18,44 L59.78,52h-12.78v-8zM37,5.08 L37.87,5.78a1.007,1.007 0,0 0,1.25 0l1.87,-1.5 1.87,1.5a1.007,1.007 0,0 0,1.25 0l1.88,-1.5 1.87,1.5a1.007,1.007 0,0 0,1.25 0l1.88,-1.5 1.88,1.5a1.007,1.007 0,0 0,1.25 0l0.88,-0.7v12.92h-18zM36,20h20v2h-20zM8,18v-14h20v14zM21,20v2h-7v-2zM6,25a1,1 0,0 1,1 -1h50a1,1 0,0 1,1 1v17h-52zM45,44v8h-12v-8zM31,44v8h-11v-8zM5.82,44h12.18v8h-13.78zM60,60h-56v-6h56z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m29,56h6v2h-6z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m18,8a1,1 0,0 1,1 1h2a3,3 0,0 0,-2 -2.816v-1.184h-2v1.184a2.993,2.993 0,0 0,1 5.816,1 1,0 1,1 -1,1h-2a3,3 0,0 0,2 2.816v1.184h2v-1.184a2.993,2.993 0,0 0,-1 -5.816,1 1,0 0,1 0,-2z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m39,8h14v2h-14z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m39,14h14v2h-14z"
+      android:fillColor="@color/colorPrimaryDark"/>
+</vector>

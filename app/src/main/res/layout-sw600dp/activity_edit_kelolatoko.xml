@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/standard_margin_3x"
+                android:paddingRight="@dimen/standard_margin_3x">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/standard_margin_2x">
+
+                    <FrameLayout
+                        android:id="@+id/btn_camera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_photo"
+                            android:layout_width="300dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/rounded_white_4dp_stroke_secondary" />
+
+                        <TextView
+                            android:id="@+id/iv_camera"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Upload Banner"
+                            android:textColor="@color/secondaryText"
+                            android:textSize="@dimen/title"/>
+                    </FrameLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin_4x"
+                    android:text="Name Store"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/subtitle" />
+
+                <EditText
+                    android:id="@+id/et_nama_toko"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standart_input_height"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/standard_small_margin"
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    android:scrollbars="none"
+                    android:textColor="@color/primaryText"
+                    android:textColorHint="@color/secondaryText"
+                    android:textSize="@dimen/subtitle" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin_4x"
+                    android:text="Color Store"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/subtitle" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/et_warna_toko"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standart_input_height"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/standard_small_margin"
+                    android:background="@android:color/transparent"
+                    android:drawableEnd="@drawable/selector_drawer"
+                    android:drawableRight="@drawable/selector_dropdown"
+                    android:drawablePadding="@dimen/standard_xsmall_margin"
+                    android:textColor="@color/primaryText"
+                    android:textColorHint="@color/secondaryText"
+                    android:textSize="@dimen/body" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin_2x"
+                    android:text="Change Store Link"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/subtitle" />
+
+                <EditText
+                    android:id="@+id/et_subdomain"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standart_input_height"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/standard_small_margin"
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:inputType="text"
+                    android:digits="abcdefghijklmnopqrstuvwxyz0123456789"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:scrollbars="none"
+                    android:textColor="@color/primaryText"
+                    android:textColorHint="@color/secondaryText"
+                    android:textSize="@dimen/subtitle" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+                <TextView
+                    android:id="@+id/tvSample"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_small_margin"
+                    android:gravity="right"
+                    android:textColor="@color/vermillion"
+                    android:textSize="@dimen/subtitle"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin_2x"
+                    android:text="No Watshapp Order"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/subtitle" />
+
+                <EditText
+                    android:id="@+id/et_nowa"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standart_input_height"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/standard_small_margin"
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:inputType="number|phone"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    android:scrollbars="none"
+                    android:textColor="@color/primaryText"
+                    android:textColorHint="@color/secondaryText"
+                    android:textSize="@dimen/subtitle" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin_2x"
+                    android:text="Address"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/subtitle" />
+
+                <EditText
+                    android:id="@+id/et_alamat_toko"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standart_input_height"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/standard_small_margin"
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:inputType="textPersonName"
+                    android:maxLength="100"
+                    android:maxLines="1"
+                    android:scrollbars="none"
+                    android:textColor="@color/primaryText"
+                    android:textColorHint="@color/secondaryText"
+                    android:textSize="@dimen/subtitle" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin_2x"
+                    android:text="Operating Hours"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/subtitle" />
+
+                <EditText
+                    android:id="@+id/et_jam_operasional"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standart_input_height"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/standard_small_margin"
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:inputType="textPersonName"
+                    android:maxLength="100"
+                    android:maxLines="1"
+                    android:scrollbars="none"
+                    android:textColor="@color/primaryText"
+                    android:textColorHint="@color/secondaryText"
+                    android:textSize="@dimen/subtitle" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin_2x"
+                    android:text="Link Facabeook"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/subtitle" />
+
+                <EditText
+                    android:id="@+id/et_linkfb"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standart_input_height"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/standard_small_margin"
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:inputType="textPersonName"
+                    android:maxLength="100"
+                    android:maxLines="1"
+                    android:scrollbars="none"
+                    android:textColor="@color/primaryText"
+                    android:textColorHint="@color/secondaryText"
+                    android:textSize="@dimen/subtitle" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin_2x"
+                    android:text="Link Instagram"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/subtitle" />
+
+                <EditText
+                    android:id="@+id/et_linkinstagram"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standart_input_height"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/standard_small_margin"
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:inputType="textPersonName"
+                    android:maxLength="100"
+                    android:maxLines="1"
+                    android:scrollbars="none"
+                    android:textColor="@color/primaryText"
+                    android:textColorHint="@color/secondaryText"
+                    android:textSize="@dimen/subtitle" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_save"
+                    android:layout_width="@dimen/standart_button_width"
+                    android:layout_height="66dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/standard_margin_4x"
+                    android:layout_marginBottom="@dimen/standard_margin_2x"
+                    android:gravity="center"
+                    android:text="@string/btn_save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/heading"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+
+
+    </FrameLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

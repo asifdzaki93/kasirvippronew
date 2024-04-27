@@ -1,0 +1,195 @@
+package id.kasirvippro.android.feature.manage.priceVariant.add
+
+import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.Intent
+import android.os.Bundle
+import android.text.InputFilter
+import android.util.Log
+import android.view.MenuItem
+import android.widget.EditText
+import id.kasirvippro.android.R
+import id.kasirvippro.android.base.BaseActivity
+import id.kasirvippro.android.feature.manage.priceVariant.list.PriceVariantListActivity
+import id.kasirvippro.android.ui.ext.toast
+import id.kasirvippro.android.models.priceVariant.PriceVariant
+import id.kasirvippro.android.rest.entity.RestException
+import id.kasirvippro.android.ui.NumberTextWatcher
+import id.kasirvippro.android.utils.*
+import kotlinx.android.synthetic.main.activity_add_pricevariant.*
+import kotlinx.android.synthetic.main.activity_add_pricevariant.btn_save
+import kotlinx.android.synthetic.main.activity_add_pricevariant.et_minimal
+import kotlinx.android.synthetic.main.activity_add_pricevariant.et_name_product
+import kotlinx.android.synthetic.main.activity_add_pricevariant.et_nominal
+import kotlinx.android.synthetic.main.activity_edit_pricevariant.*
+import java.util.regex.PatternSyntaxException
+
+class AddPriceVariantActivity : BaseActivity<AddPriceVariantPresenter, AddPriceVariantContract.View>(), AddPriceVariantContract.View {
+
+    private val CODE_OPEN_SCAN = 1001
+    private val CODE_OPEN_ADD = 1003
+
+    override fun createPresenter(): AddPriceVariantPresenter {
+        return AddPriceVariantPresenter(this, this)
+    }
+
+    override fun createLayout(): Int {
+        return R.layout.activity_add_pricevariant
+    }
+
+    override fun startingUpActivity(savedInstanceState: Bundle?) {
+        renderView()
+        getPresenter()?.onViewCreated()
+    }
+
+    private fun renderView(){
+        val decimal = AppConstant.DECIMAL.getDecimalData()
+        btn_save.setOnClickListener {
+            showLoadingDialog()
+            if(decimal=="No Decimal") {
+                val minimal    = et_minimal.text.toString().trim()
+                val nominal = et_nominal.text.toString().trim().replace(",","")
+
+                getPresenter()?.onCheck(minimal, nominal)
+            }else{
+                val minimal = et_minimal.text.toString().trim()
+                val nominal = et_nominal.text.toString().trim()
+
+                getPresenter()?.onCheck(minimal, nominal)
+            }
+
+        }
+        if(decimal=="No Decimal") {
+            et_minimal.addTextChangedListener(NumberTextWatcher(et_minimal))
+            et_nominal.addTextChangedListener(NumberTextWatcher(et_nominal))
+        }else{
+            et_minimal.inputFilterDecimal(maxDigitsIncludingPoint = 9, maxDecimalPlaces = 2)
+            et_nominal.inputFilterDecimal(maxDigitsIncludingPoint = 9, maxDecimalPlaces = 2)
+        }
+
+    }
+
+    fun EditText.inputFilterDecimal(
+        // maximum digits including point and without decimal places
+        maxDigitsIncludingPoint: Int,
+        maxDecimalPlaces: Int // maximum decimal places
+
+    ){
+
+        try {
+
+            filters = arrayOf<InputFilter>(
+
+                Helper.DecimalDigitsInputFilter(maxDigitsIncludingPoint, maxDecimalPlaces)
+
+            )
+
+        }catch (e: PatternSyntaxException){
+
+            isEnabled = false
+
+            hint = e.message
+
+        }
+
+    }
+    private fun setupToolbar() {
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            setDisplayShowHomeEnabled(true)
+            title = getString(R.string.lbl_price_variant)
+            elevation = 0f
+
+        }
+
+    }
+
+    override fun getIdProduct(): String? {
+        val idproduct = getIntent().getStringExtra("id_product")
+        return idproduct
+    }
+
+    override fun getDetail(): String? {
+        val detail = getIntent().getStringExtra("detail")
+        return detail
+    }
+
+    @SuppressLint("SetTextI18n")
+    override fun setProduct(value: String) {
+        et_name_product.setText(value)
+        Log.d("detail", value)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        setupToolbar()
+    }
+
+    override fun showMessage(code: Int, msg: String?) {
+        hideLoadingDialog()
+        when (code) {
+            RestException.CODE_USER_NOT_FOUND -> restartLoginActivity()
+            RestException.CODE_MAINTENANCE -> openMaintenanceActivity()
+            RestException.CODE_UPDATE_APP -> openUpdateActivity()
+            else -> {
+                msg?.let {
+                    toast(this,it)}
+            }
+
+        }
+
+    }
+
+    override fun onClose(status: Int) {
+        val id = getIntent().getStringExtra("id_product")
+        val intent = Intent(this, PriceVariantListActivity::class.java)
+        intent.putExtra(AppConstant.DATA,id)
+        intent.putExtra("id_product", id);
+        startActivityForResult(intent,CODE_OPEN_ADD)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            android.R.id.home -> finish()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        getPresenter()?.onDestroy()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    }
+
+    public fun hideLoading(){
+        hideLoadingDialog()
+    }
+
+    override fun openEditPage(product: PriceVariant) {
+        intent.putExtra(AppConstant.DATA,product)
+        setResult(Activity.RESULT_OK,intent)
+        finish()
+    }
+
+    override fun onPremiumPage(isPremium: Boolean) {
+        if(isPremium){
+
+        }
+        else{
+
+        }
+    }
+
+
+
+
+
+}

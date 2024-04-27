@@ -1,0 +1,39 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="512dp"
+    android:height="512dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+  <path
+      android:pathData="m51,57h-12.05,-14 -11.95v4h38z"
+      android:fillColor="@color/colorPrimaryLight"/>
+  <path
+      android:pathData="m16,48h32v-42h-32zM32,10a12,12 0,1 1,-12 12,12 12,0 0,1 12,-12zM20,38h18v-2l6,4 -6,4v-2h-18z"
+      android:fillColor="@color/colorPrimaryLight"/>
+  <path
+      android:pathData="M36,26m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"
+      android:fillColor="@color/colorPrimaryLight"/>
+  <path
+      android:pathData="M28,18m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"
+      android:fillColor="@color/colorPrimaryLight"/>
+  <path
+      android:pathData="m49,52a3,3 0,0 0,3 -3v-44a3,3 0,0 0,-3 -3h-34a3,3 0,0 0,-3 3v44a3,3 0,0 0,3 3h8.955v4h-10.955a1,1 0,0 0,-1 1v4a1,1 0,0 0,1 1h38a1,1 0,0 0,1 -1v-4a1,1 0,0 0,-1 -1h-11.045v-4zM14,49v-44a1,1 0,0 1,1 -1h34a1,1 0,0 1,1 1v44a1,1 0,0 1,-1 1h-34a1,1 0,0 1,-1 -1zM50,60h-36v-2h36zM37.955,56h-12v-4h12z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m49,6a1,1 0,0 0,-1 -1h-32a1,1 0,0 0,-1 1v42a1,1 0,0 0,1 1h32a1,1 0,0 0,1 -1zM47,47h-30v-40h30z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m32,35a13,13 0,1 0,-13 -13,13.015 13.015,0 0,0 13,13zM32,11a11,11 0,1 1,-11 11,11.013 11.013,0 0,1 11,-11z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m28,21a3,3 0,1 0,-3 -3,3 3,0 0,0 3,3zM28,17a1,1 0,1 1,-1 1,1 1,0 0,1 1,-1z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m33,26a3,3 0,1 0,3 -3,3 3,0 0,0 -3,3zM37,26a1,1 0,1 1,-1 -1,1 1,0 0,1 1,1z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m26.2878,26.2932l9.9984,-9.9984l1.414,1.414l-9.9984,9.9984z"
+      android:fillColor="@color/colorPrimaryDark"/>
+  <path
+      android:pathData="m20,43h17v1a1,1 0,0 0,1.555 0.832l6,-4a1,1 0,0 0,0 -1.664l-6,-4a1,1 0,0 0,-1.555 0.832v1h-17a1,1 0,0 0,-1 1v4a1,1 0,0 0,1 1zM21,39h17a1,1 0,0 0,1 -1v-0.131l3.2,2.131 -3.2,2.131v-0.131a1,1 0,0 0,-1 -1h-17z"
+      android:fillColor="@color/colorPrimaryDark"/>
+</vector>

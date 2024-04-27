@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+    <FrameLayout android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+            <LinearLayout
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:paddingLeft="@dimen/standard_margin_3x"
+                    android:paddingRight="@dimen/standard_margin_3x"
+                    android:paddingBottom="96dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <ImageView
+                        android:id="@+id/iv_photo"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/standard_margin_3x"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        app:srcCompat="@drawable/ic_user"
+                        />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/standard_margin_4x"
+                        android:text="@string/lbl_name"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/caption" />
+
+                <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standart_input_height"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/standard_small_margin"
+                        android:background="@android:color/transparent"
+                        android:ellipsize="end"
+                        android:inputType="textPersonName"
+                        android:maxLength="64"
+                        android:maxLines="1"
+                        android:scrollbars="none"
+                        android:textColor="@color/primaryText"
+                        android:textColorHint="@color/secondaryText"
+                        android:textSize="@dimen/subheading" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/standard_margin_2x"
+                        android:text="@string/lbl_email"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/caption" />
+
+                <EditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standart_input_height"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/standard_small_margin"
+                        android:background="@android:color/transparent"
+                        android:ellipsize="end"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="64"
+                        android:maxLines="1"
+                        android:scrollbars="none"
+                        android:textColor="@color/primaryText"
+                        android:textColorHint="@color/secondaryText"
+                        android:textSize="@dimen/subheading" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/standard_margin_2x"
+                        android:text="@string/lbl_phone"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/caption" />
+
+                <EditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standart_input_height"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/standard_small_margin"
+                        android:background="@android:color/transparent"
+                        android:ellipsize="end"
+                        android:inputType="number"
+                        android:maxLength="64"
+                        android:maxLines="1"
+                        android:scrollbars="none"
+                        android:textColor="@color/primaryText"
+                        android:textColorHint="@color/secondaryText"
+                        android:textSize="@dimen/subheading" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/standard_margin_2x"
+                        android:text="@string/lbl_address"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/caption" />
+
+                <EditText
+                        android:id="@+id/et_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standart_input_height"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/standard_small_margin"
+                        android:background="@android:color/transparent"
+                        android:inputType="textPostalAddress"
+                        android:maxLength="100"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/primaryText"
+                        android:textSize="@dimen/subheading" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/standard_margin_2x"
+                        android:text="@string/basic_salary"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/caption" />
+
+                <EditText
+                        android:id="@+id/et_gaji"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standart_input_height"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/standard_small_margin"
+                        android:background="@android:color/transparent"
+                        android:inputType="number"
+                        android:digits="0123456789."
+                        android:scrollbars="vertical"
+                        android:hint="0"
+                        android:textColor="@color/primaryText"
+                        android:textSize="@dimen/subheading" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/standard_margin_2x"
+                        android:text="@string/commision"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/caption" />
+
+                <EditText
+                        android:id="@+id/et_komisi"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standart_input_height"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/standard_small_margin"
+                        android:background="@android:color/transparent"
+                        android:inputType="number"
+                        android:digits="0123456789"
+                        android:maxLength="3"
+                        android:hint="0"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/primaryText"
+                        android:textSize="@dimen/subheading" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/standard_margin_2x"
+                        android:text="@string/allowance"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/caption" />
+
+                <EditText
+                        android:id="@+id/et_tunjangan"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standart_input_height"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/standard_small_margin"
+                        android:background="@android:color/transparent"
+                        android:inputType="number"
+                        android:digits="0123456789."
+                        android:scrollbars="vertical"
+                        android:textColor="@color/primaryText"
+                        android:hint="0"
+                        android:textSize="@dimen/subheading" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/standard_margin_2x"
+                        android:text="@string/salary_cut"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/caption" />
+
+                <EditText
+                        android:id="@+id/et_potongan"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standart_input_height"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/standard_small_margin"
+                        android:background="@android:color/transparent"
+                        android:inputType="number"
+                        android:digits="0123456789."
+                        android:scrollbars="vertical"
+                        android:textColor="@color/primaryText"
+                        android:hint="0"
+                        android:textSize="@dimen/subheading" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
+
+                <TextView
+                        android:layout_marginTop="@dimen/standard_margin_2x"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/store"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/caption"/>
+                <TextView
+                        android:clickable="true"
+                        android:layout_marginTop="@dimen/standard_small_margin"
+                        android:layout_gravity="center"
+                        android:id="@+id/et_store"
+                        android:textColorHint="@color/secondaryText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standart_input_height"
+                        android:textColor="@color/primaryText"
+                        android:textSize="@dimen/body"
+                        android:drawableRight="@drawable/selector_dropdown"
+                        android:drawableEnd="@drawable/selector_dropdown"
+                        android:drawablePadding="@dimen/standard_xsmall_margin"
+                        android:gravity="center_vertical"
+                        android:focusable="true"/>
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/standard_margin_2x"
+                        android:text="@string/potition"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/caption" />
+
+                <RadioGroup
+                        android:layout_marginTop="@dimen/standard_margin"
+                        android:id="@+id/rg_job"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <RadioButton
+                            android:id="@+id/rb_admin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Admin"
+                            android:textColor="@color/secondaryText"/>
+
+
+                    <RadioButton
+                            android:id="@+id/rb_kasir"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Cashier"
+                            android:textColor="@color/secondaryText"
+                            />
+
+                    <RadioButton
+                        android:id="@+id/rb_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Accounting"
+                        android:textColor="@color/secondaryText"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/rb_manager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Manager"
+                        android:textColor="@color/secondaryText"
+                        />
+
+
+                </RadioGroup>
+
+                <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_save"
+                        android:layout_width="@dimen/standart_button_width"
+                        android:layout_height="56dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/standard_margin_4x"
+                        android:layout_marginBottom="@dimen/standard_margin_2x"
+                        android:gravity="center"
+                        android:text="@string/btn_save"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/subheading"
+                        android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider" />
+
+
+    </FrameLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

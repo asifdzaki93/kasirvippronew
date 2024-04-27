@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/navigation_home"
+            android:icon="@drawable/selector_tab_home"
+            android:title="@string/menu_home" />
+    <item
+            android:id="@+id/navigation_news"
+            android:icon="@drawable/selector_tab_news"
+            android:color="@color/vermillion"
+            android:title="@string/tab_news" />
+    <item
+            android:id="@+id/navigation_account"
+            android:icon="@drawable/selector_tab_account"
+            android:title="@string/account" />
+
+</menu>

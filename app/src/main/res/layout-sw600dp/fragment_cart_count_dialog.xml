@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  xmlns:tools="http://schemas.android.com/tools"
+			  xmlns:app="http://schemas.android.com/apk/res-auto"
+			  android:layout_width="match_parent"
+			  android:orientation="vertical"
+			  android:padding="16dp"
+			  android:layout_height="wrap_content">
+
+	<View
+			android:layout_width="56dp"
+			android:layout_height="4dp"
+			android:layout_gravity="center"
+			android:layout_marginBottom="24dp"
+			android:background="@drawable/rounded_home_more_menu" />
+
+	<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+		<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<TextView
+					android:id="@+id/tv_title"
+					android:layout_weight="1"
+					android:layout_width="0dp"
+					android:textStyle="bold"
+					android:textSize="20sp"
+					android:textColor="@color/primaryText"
+					android:layout_height="wrap_content"
+					android:text="Amount"
+			/>
+
+			<ImageView
+					android:id="@+id/close_btn"
+					app:srcCompat="@drawable/ic_close"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<EditText
+			android:layout_marginTop="@dimen/standard_margin_2x"
+			android:padding="@dimen/standard_margin_2x"
+			android:layout_gravity="center"
+			android:inputType="number"
+			android:id="@+id/et_count"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/rounded_white_4dp_stroke_gray"
+			android:textColor="@color/primaryText"
+			android:textSize="@dimen/subtitle"
+			android:maxLength="7"
+			android:gravity="top"
+	/>
+	<com.google.android.material.button.MaterialButton
+			android:layout_gravity="bottom|center_horizontal"
+			android:layout_marginTop="@dimen/standard_margin_3x"
+			android:layout_marginBottom="@dimen/standard_margin_2x"
+			android:id="@+id/btn_save"
+			android:layout_width="@dimen/standart_button_width"
+			android:layout_height="66dp"
+			android:textColor="@color/white"
+			android:textSize="@dimen/heading"
+			android:text="@string/btn_save"
+			android:textAllCaps="false"
+			android:gravity="center"
+			android:textStyle="bold"
+	/>
+</LinearLayout>

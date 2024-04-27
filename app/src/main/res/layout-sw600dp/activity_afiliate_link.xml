@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_blue"
+            android:orientation="vertical"
+            android:padding="@dimen/standard_margin_4x">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                app:srcCompat="@drawable/ic_bonus"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_margin_2x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/heading"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="@string/lbl_sharing" />
+
+            <TextView
+                android:layout_marginTop="@dimen/standard_small_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/subheading"
+                android:textColor="@color/white"
+                android:text="@string/lbl_info_share" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/standard_margin_3x"
+            android:layout_marginRight="@dimen/standard_margin_3x"
+            android:layout_marginLeft="@dimen/standard_margin_3x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/standard_margin_3x"
+                android:layout_marginEnd="@dimen/standard_margin_3x"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/divider"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/heading"
+                android:textColor="@color/secondaryText"
+                android:text="@string/lbl_share"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/standard_margin_3x"
+                android:layout_marginLeft="@dimen/standard_margin_3x"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/divider"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_marginTop="@dimen/standard_margin_3x"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingBottom="@dimen/standard_margin_2x"
+            android:paddingTop="@dimen/standard_margin_2x"
+            android:paddingLeft="@dimen/standard_margin_6x"
+            android:paddingRight="@dimen/standard_margin_6x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="XXXXXX"
+            android:textColor="@color/primaryText"
+            android:textSize="@dimen/heading"
+            android:textStyle="bold"
+            android:background="@drawable/rounded_white_50dp_stroke_accent"/>
+
+        <LinearLayout
+            android:layout_margin="@dimen/standard_margin_3x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_gravity="center"
+                android:id="@+id/btn_copy"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/subheading"
+                android:text="@string/btn_copy"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@drawable/selector_btn_white_stroke_accent"/>
+            <TextView
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:layout_gravity="center"
+                android:id="@+id/btn_share"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/subheading"
+                android:text="@string/btn_share_social"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@drawable/selector_btn_accent"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginRight="@dimen/standard_margin_3x"
+            android:layout_marginLeft="@dimen/standard_margin_3x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/subheading"
+            android:textColor="@color/secondaryText"
+            android:text="@string/lbl_info_commision" />
+
+    </LinearLayout>
+
+</ScrollView>

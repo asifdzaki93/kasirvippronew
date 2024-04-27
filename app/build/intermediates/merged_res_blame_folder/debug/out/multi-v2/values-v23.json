@@ -1,0 +1,66 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\kirim besok\\kasirvippro\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-2\\files-2.1\\79f3fefa34f8338d1557175419382cf5\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "200"
+                    },
+                    "to": {
+                        "startLines": "56",
+                        "startColumns": "4",
+                        "startOffsets": "3867",
+                        "endLines": "58",
+                        "endColumns": "12",
+                        "endOffsets": "4012"
+                    }
+                },
+                {
+                    "source": "D:\\kirim besok\\kasirvippro\\app\\src\\main\\res\\values-v23\\styles.xml",
+                    "from": {
+                        "startLines": "2,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,515",
+                        "endLines": "9,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "510,905"
+                    },
+                    "to": {
+                        "startLines": "2,59",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,4017",
+                        "endLines": "9,65",
+                        "endColumns": "12,12",
+                        "endOffsets": "510,4407"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-2\\files-2.1\\8213ecf0766b820bfc5829b40745e27a\\appcompat-1.1.0\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,20,34,35,36,37,41,42,43,44",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1371,2267,2386,2513,2618,2842,2957,3064,3177",
+                        "endLines": "2,3,4,5,19,33,34,35,36,40,41,42,43,47",
+                        "endColumns": "134,134,74,86,12,12,118,126,104,12,114,106,112,12",
+                        "endOffsets": "185,320,395,482,1366,2262,2381,2508,2613,2837,2952,3059,3172,3402"
+                    },
+                    "to": {
+                        "startLines": "10,11,12,13,14,28,42,43,44,45,49,50,51,52",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "515,650,785,860,947,1831,2727,2846,2973,3078,3302,3417,3524,3637",
+                        "endLines": "10,11,12,13,27,41,42,43,44,48,49,50,51,55",
+                        "endColumns": "134,134,74,86,12,12,118,126,104,12,114,106,112,12",
+                        "endOffsets": "645,780,855,942,1826,2722,2841,2968,3073,3297,3412,3519,3632,3862"
+                    }
+                }
+            ]
+        }
+    ]
+}

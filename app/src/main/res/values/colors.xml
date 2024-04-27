@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#BA5603</color>
+    <color name="colorPrimaryDark">#8E4203</color>
+    <color name="colorPrimaryLight">#D8A275</color>
+    <color name="colorPrimaryLight30">#4D944300</color>
+    <color name="colorPrimaryLight70">#B3BA5603</color>
+    <color name="colorAccent">#BC5703</color>
+    <color name="colorAccentLight">#CC9467</color>
+    <color name="colorAccentDark">#9F4802</color>
+    <color name="colorAccentDarkHard">#683002</color>
+
+    <color name="primaryText">#333C3A</color>
+    <color name="secondaryText">#7B8696</color>
+
+    <color name="white_gray">#f3f5f7</color>
+    <color name="white">#ffffff</color>
+    <color name="white50">#80FFFFFF</color>
+    <color name="divider">#E2E2E2</color>
+    <color name="divider_light">#F3F3F3</color>
+    <color name="vermillion">#dc1818</color>
+    <color name="orange">#ffa500</color>
+    <color name="orange_dark">#B87700</color>
+    <color name="black_60">#99000000</color>
+    <color name="bg_gray">#EEEEEE</color>
+    <color name="bg_tab">#A2A2A2</color>
+    <color name="dark_gray">#858585</color>
+    <color name="black">#000000</color>
+    <color name="bg_header_success">#17B80C</color>
+    <color name="charcoal_grey_two_opa_64">#A339434E</color>
+
+    <color name="status_credit_bg">#1ADC1818</color>
+    <color name="status_credit_text">#dc1818</color>
+    <color name="status_finish_text">#9C27B0</color>
+    <color name="status_cancel_bg">#1A000000</color>
+    <color name="status_cancel_text">#000000</color>
+    <color name="status_success_bg">#1AB226CA</color>
+    <color name="status_finish_bg">#1B4CAF50</color>
+    <color name="status_success_text">#008c8c</color>
+    <color name="status_debt_bg">#1BAF7A4C</color>
+    <color name="status_debt_text">#FF9800</color>
+
+
+</resources>

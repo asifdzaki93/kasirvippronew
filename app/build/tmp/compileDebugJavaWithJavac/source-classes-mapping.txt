@@ -1,0 +1,90 @@
+id/kasirvippro/android/utils/print/PrinterUtil.java
+ id.kasirvippro.android.utils.print.PrinterUtil
+id/kasirvippro/android/ui/PaymentNumberTextWatcher.java
+ id.kasirvippro.android.ui.PaymentNumberTextWatcher
+id/kasirvippro/android/utils/glide/UnsafeOkHttpClient.java
+ id.kasirvippro.android.utils.glide.UnsafeOkHttpClient
+ id.kasirvippro.android.utils.glide.UnsafeOkHttpClient$1
+ id.kasirvippro.android.utils.glide.UnsafeOkHttpClient$2
+id/kasirvippro/android/callback/BluetoothCallback.java
+ id.kasirvippro.android.callback.BluetoothCallback
+id/kasirvippro/android/utils/Signature.java
+ id.kasirvippro.android.utils.Signature
+id/kasirvippro/android/utils/print/PrinterLabelUtil.java
+ id.kasirvippro.android.utils.print.PrinterLabelUtil
+id/kasirvippro/android/utils/MyTagHandler.java
+ id.kasirvippro.android.utils.MyTagHandler
+ id.kasirvippro.android.utils.MyTagHandler$1
+ id.kasirvippro.android.utils.MyTagHandler$ListTag
+ id.kasirvippro.android.utils.MyTagHandler$Ol
+ id.kasirvippro.android.utils.MyTagHandler$Ul
+com/bumptech/glide/GeneratedRequestManagerFactory.java
+ com.bumptech.glide.GeneratedRequestManagerFactory
+id/kasirvippro/android/callback/PermissionCallback.java
+ id.kasirvippro.android.callback.PermissionCallback
+com/bumptech/glide/GeneratedAppGlideModuleImpl.java
+ com.bumptech.glide.GeneratedAppGlideModuleImpl
+id/kasirvippro/android/utils/BluetoothUtil.java
+ id.kasirvippro.android.utils.BluetoothUtil
+id/kasirvippro/android/utils/print/Formatter.java
+ id.kasirvippro.android.utils.print.Formatter
+id/kasirvippro/android/utils/glide/GlideRequests.java
+ id.kasirvippro.android.utils.glide.GlideRequests
+id/kasirvippro/android/utils/glide/GlideOptions.java
+ id.kasirvippro.android.utils.glide.GlideOptions
+id/kasirvippro/android/feature/printerReturn/PrinterAdapter.java
+ id.kasirvippro.android.feature.printerReturn.PrinterAdapter
+ id.kasirvippro.android.feature.printerReturn.PrinterAdapter$1
+id/kasirvippro/android/ui/SquareFrameLayout.java
+ id.kasirvippro.android.ui.SquareFrameLayout
+id/kasirvippro/android/utils/print/PrintPic.java
+ id.kasirvippro.android.utils.print.PrintPic
+id/kasirvippro/android/BuildConfig.java
+ id.kasirvippro.android.BuildConfig
+id/kasirvippro/android/feature/printerSumary/PrinterSumaryAdapter.java
+ id.kasirvippro.android.feature.printerSumary.PrinterSumaryAdapter
+ id.kasirvippro.android.feature.printerSumary.PrinterSumaryAdapter$1
+id/kasirvippro/android/utils/ImageCompressionAsyncTask.java
+ id.kasirvippro.android.utils.ImageCompressionAsyncTask
+ id.kasirvippro.android.utils.ImageCompressionAsyncTask$ImageTaskListener
+id/kasirvippro/android/utils/print/PrinterUtilDaily.java
+ id.kasirvippro.android.utils.print.PrinterUtilDaily
+id/kasirvippro/android/feature/printerLabel/PrinterLabelAdapter.java
+ id.kasirvippro.android.feature.printerLabel.PrinterLabelAdapter
+ id.kasirvippro.android.feature.printerLabel.PrinterLabelAdapter$1
+id/kasirvippro/android/utils/PermissionUtil.java
+ id.kasirvippro.android.utils.PermissionUtil
+ id.kasirvippro.android.utils.PermissionUtil$1
+ id.kasirvippro.android.utils.PermissionUtil$10
+ id.kasirvippro.android.utils.PermissionUtil$2
+ id.kasirvippro.android.utils.PermissionUtil$3
+ id.kasirvippro.android.utils.PermissionUtil$4
+ id.kasirvippro.android.utils.PermissionUtil$5
+ id.kasirvippro.android.utils.PermissionUtil$6
+ id.kasirvippro.android.utils.PermissionUtil$7
+ id.kasirvippro.android.utils.PermissionUtil$8
+ id.kasirvippro.android.utils.PermissionUtil$9
+id/kasirvippro/android/utils/BluetoothStateReceiver.java
+ id.kasirvippro.android.utils.BluetoothStateReceiver
+id/kasirvippro/android/utils/glide/GlideRequest.java
+ id.kasirvippro.android.utils.glide.GlideRequest
+id/kasirvippro/android/utils/print/PrinterUtilSumary.java
+ id.kasirvippro.android.utils.print.PrinterUtilSumary
+id/kasirvippro/android/utils/BluetoothConnectTask.java
+ id.kasirvippro.android.utils.BluetoothConnectTask
+id/kasirvippro/android/utils/print/PrinterUtilReturn.java
+ id.kasirvippro.android.utils.print.PrinterUtilReturn
+id/kasirvippro/android/ui/EndlessRecyclerViewScrollListener.java
+ id.kasirvippro.android.ui.EndlessRecyclerViewScrollListener
+id/kasirvippro/android/feature/printer/PrinterAdapter.java
+ id.kasirvippro.android.feature.printer.PrinterAdapter
+ id.kasirvippro.android.feature.printer.PrinterAdapter$1
+id/kasirvippro/android/ui/ViewPagerAdapter.java
+ id.kasirvippro.android.ui.ViewPagerAdapter
+id/kasirvippro/android/feature/printerDaily/PrinterDailyAdapter.java
+ id.kasirvippro.android.feature.printerDaily.PrinterDailyAdapter
+ id.kasirvippro.android.feature.printerDaily.PrinterDailyAdapter$1
+id/kasirvippro/android/utils/glide/GlideApp.java
+ id.kasirvippro.android.utils.glide.GlideApp
+id/kasirvippro/android/ui/NumberTextWatcher.java
+ id.kasirvippro.android.ui.NumberTextWatcher

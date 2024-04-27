@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/line_product"
+    android:id="@+id/ll_wrapper"
+    android:layout_marginTop="4dp"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"/>
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="@string/lbl_input_menu_name_title"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:textColor="@color/primaryText"
+        android:textSize="@dimen/bodyadress"/>
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="match_parent"
+        android:text="@string/lbl_input_price_sell_title"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:textColor="@color/orange_dark"
+        android:textSize="@dimen/subheading"/>
+    <TextView
+        android:id="@+id/tv_stok"
+        android:text="@string/have_stock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:textColor="@color/primaryText"
+        android:textSize="@dimen/caption"/>
+
+</LinearLayout>

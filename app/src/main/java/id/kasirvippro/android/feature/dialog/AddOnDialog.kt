@@ -1,0 +1,144 @@
+package id.kasirvippro.android.feature.dialog
+
+import android.app.Dialog
+import android.content.Context
+import android.os.Build
+import android.os.Bundle
+import android.view.*
+import android.widget.*
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialog
+import id.kasirvippro.android.R
+import id.kasirvippro.android.models.addOn.AddOn
+import id.kasirvippro.android.utils.AppConstant
+import kotlinx.android.synthetic.main.fragment_places_dialog.*
+import kotlinx.android.synthetic.main.item_list_choose_product.view.*
+import kotlinx.android.synthetic.main.item_place.view.tv_name
+
+class AddOnDialog : BottomSheetDialogFragment() {
+    private var mListener: Listener? = null
+    private var data: List<AddOn> ?= null
+    private var title: String? = ""
+    private var position: Int ?= -1
+    private var selected: AddOn ?= null
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_places_dialog_product, container, false)
+    }
+
+    fun setListener(listener: Listener){
+        mListener = listener
+    }
+
+    fun setData(title:String, position:Int,list:List<AddOn>, select:AddOn?){
+        this.title = title
+        this.position = position
+        data = list
+        selected = select
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        if (context == null) return
+        list.layoutManager = LinearLayoutManager(context)
+        tv_title.text = title
+        list.adapter = ItemAdapter(data!!,selected)
+
+        close_btn.setOnClickListener {
+            dismiss()
+        }
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        val parent = parentFragment
+        if (parent != null) {
+            mListener = parent as Listener
+        } else {
+            mListener = context as Listener
+        }
+    }
+
+    override fun onDetach() {
+        mListener = null
+        super.onDetach()
+    }
+
+    override fun getTheme(): Int {
+        return R.style.BottomSheetDialogTheme
+    }
+
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        val dialog = super.onCreateDialog(savedInstanceState) as BottomSheetDialog
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            dialog.window?.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        }
+        dialog.setOnShowListener { dialog1 ->
+            val d = dialog1 as BottomSheetDialog
+            val bottomSheet = d.findViewById<FrameLayout>(com.google.android.material.R.id.design_bottom_sheet)
+            bottomSheet?.layoutParams?.height = ViewGroup.LayoutParams.MATCH_PARENT
+            BottomSheetBehavior.from(bottomSheet!!).setState(BottomSheetBehavior.STATE_EXPANDED)
+        }
+        return dialog
+    }
+
+    interface Listener {
+        fun onItemClicked(data: AddOn, position:Int)
+    }
+
+    private inner class ViewHolder internal constructor(inflater: LayoutInflater, parent: ViewGroup) :
+        RecyclerView.ViewHolder(inflater.inflate(R.layout.item_list_addon, parent, false)) {
+
+
+        internal val button: TextView = itemView.tv_name
+        internal val price: TextView = itemView.tv_price
+        internal val wrapper: LinearLayout? = itemView.ll_wrapper
+
+
+        init {
+            if (wrapper != null) {
+                wrapper.setOnClickListener {
+                    mListener?.let {
+                        data?.get(adapterPosition)?.let { it1 -> it.onItemClicked(it1,position!!) }
+                        dismiss()
+                    }
+                }
+            }
+        }
+    }
+
+    private inner class ItemAdapter internal constructor(val data: List<AddOn>, val selected: AddOn?) :
+        RecyclerView.Adapter<ViewHolder>() {
+
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+            return ViewHolder(LayoutInflater.from(parent.context), parent)
+        }
+
+        override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
+            val place = data[position]
+            holder.button.text = place.name_addon
+            holder.price.text = AppConstant.CURRENCY.getCurrencyData() + place.nominal
+
+        }
+
+        override fun getItemCount(): Int {
+            return data.size
+        }
+    }
+
+    companion object {
+        const val TAG = "AddOnDialog"
+
+        fun newInstance(): AddOnDialog =
+            AddOnDialog().apply {
+                arguments = Bundle().apply {
+                }
+            }
+
+    }
+}

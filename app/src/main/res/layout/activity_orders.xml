@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/standard_margin_1.5x"
+                    android:textColor="@color/primaryText"
+                    android:textColorHint="@color/secondaryText"
+                    android:textSize="@dimen/subheading" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:id="@+id/et_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/standard_margin_1.5x"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/gradient_blue"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/subheading" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+
+                <TextView
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_insert_number"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/standard_margin_1.5x"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/title"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/et_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/primaryText"
+                    android:textColorHint="@color/colorPrimary"
+                    android:textSize="@dimen/caption" />
+                <TextView
+                    android:id="@+id/et_buyer_sku_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/standard_margin_1.5x"
+                    android:textColor="@color/primaryText"
+                    android:textColorHint="@color/secondaryText"
+                    android:textSize="@dimen/subheading" />
+                <TextView
+                    android:id="@+id/et_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/standard_margin_1.5x"
+                    android:textColor="@color/primaryText"
+                    android:textColorHint="@color/secondaryText"
+                    android:textSize="@dimen/subheading" />
+
+                <EditText
+                    android:id="@+id/et_hargajual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/lbl_input_price_sell_title"
+                    android:background="@drawable/rounded_white_4dp_stroke_gray"
+                    android:inputType="number"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/title"
+                    android:textStyle="bold"
+                    tools:ignore="TextFields" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_pin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="20dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="@string/lbl_insert_pin"
+                        android:background="@drawable/rounded_vermilion_4dp"
+                        android:inputType="numberPassword"
+                        android:maxLength="6"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/title"
+                        android:textStyle="bold"
+                        tools:ignore="TextFields" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="end|bottom"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/divider"
+            android:paddingTop="1dp">
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/et_price"
+                        android:layout_width="0dp"
+                        android:text="@string/lbl_order"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/standard_margin_2x"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/heading"
+                        android:textColor="@color/primaryText"/>
+                    <TextView
+                        android:layout_marginRight="@dimen/standard_margin_2x"
+                        android:gravity="center"
+                        android:id="@+id/tv_order"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_order"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/heading"
+                        android:background="@drawable/gradient_blue"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

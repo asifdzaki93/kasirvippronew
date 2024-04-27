@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+    <View
+            android:layout_width="56dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rounded_home_more_menu" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pay Bills"
+                    android:textColor="@color/primaryText"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            <ImageView
+                    android:id="@+id/close_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_close" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard_margin_2x"
+            android:gravity="center"
+            android:text="@string/bill"
+            android:textColor="@color/secondaryText"
+            android:textSize="@dimen/subtitle"
+            android:textStyle="bold" />
+
+    <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/primaryText"
+            android:textSize="@dimen/title"
+            android:textStyle="bold" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard_margin_2x"
+            android:background="@drawable/rounded_white_4dp_stroke_gray"
+            android:orientation="horizontal"
+            android:padding="@dimen/standard_margin_2x">
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_detail_id"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/body" />
+            <TextView
+                    android:id="@+id/tv_id"
+                    android:layout_marginTop="@dimen/standard_xsmall_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/subheading"
+                    android:textStyle="bold"/>
+        </LinearLayout>
+
+        <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:background="#e1e6ed" />
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+            <TextView
+                    android:id="@+id/lbl_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Customer/Supplier"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/body" />
+            <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_marginTop="@dimen/standard_xsmall_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/subheading"
+                    android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+            android:layout_marginTop="@dimen/standard_margin_2x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/payment_amount"
+            android:textColor="@color/primaryText"
+            android:textSize="@dimen/subheading"
+            android:textStyle="bold"/>
+    <EditText
+            android:layout_marginTop="@dimen/standard_small_margin"
+            android:padding="@dimen/standard_margin_2x"
+            android:layout_gravity="center"
+            android:inputType="numberDecimal"
+            android:id="@+id/et_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_white_4dp_stroke_gray"
+            android:textColor="@color/primaryText"
+            android:textSize="@dimen/subheading"
+            android:maxLength="7"
+            android:gravity="top"
+            />
+    <com.google.android.material.button.MaterialButton
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="@dimen/standard_margin_3x"
+            android:layout_marginBottom="@dimen/standard_margin_2x"
+            android:id="@+id/btn_save"
+            android:layout_width="@dimen/standart_button_width"
+            android:layout_height="66dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/heading"
+            android:text="@string/btn_bayar"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textStyle="bold"
+            />
+</LinearLayout>
